@@ -1,0 +1,301 @@
+[{
+    "pregunta": "El lenguaje C es un lenguaje de programación de alto nivel. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+}, {
+    "pregunta": "En el lenguaje C, todas las variables deben ser declaradas antes de ser utilizadas.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El operador && se utiliza para realizar una operación OR en el lenguaje C.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El lenguaje C es un lenguaje compilado, lo que significa que el código fuente se convierte en código de máquina ejecutable. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "En el lenguaje C, la función main() es obligatoria y siempre debe devolver un valor entero. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Las variables en el lenguaje C pueden tener nombres que incluyan espacios en blanco. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "La sentencia if-else en el lenguaje C se utiliza para tomar decisiones basadas en una condición. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El lenguaje C es muy popular en la programación de sistemas operativos debido a su eficiencia y manejo de memoria",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El lenguaje C es muy similar al lenguaje C++, pero C++ tiene características adicionales como la programación orientada a objetos. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El lenguaje C proporciona una biblioteca estándar que incluye funciones para operaciones matemáticas, entrada y salida de datos, y manejo de archivos. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una estructura en C?",
+    "posiblesRespuestas": ["Una variable que contiene múltiples valores.", "Una declaración que define un nuevo tipo de dato.", "Un bloque de código que se ejecuta repetidamente."],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de un puntero en C?",
+    "posiblesRespuestas": ["tipo_de_dato *nombre_puntero;", "tipo_de_dato &nombre_puntero;", "tipo_de_dato nombre_puntero;"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de una macro en C?",
+    "posiblesRespuestas": ["#define nombre_macro valor_macro", "#macro nombre_macro valor_macro", "#variable nombre_macro valor_macro"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una función en C?",
+    "posiblesRespuestas": ["Un conjunto de instrucciones que se ejecutan cuando se llaman desde otra parte del programa", "Una variable que almacena múltiples valores.", "Un tipo de dato utilizado para almacenar números enteros."],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de un arreglo en C?",
+    "posiblesRespuestas": ["nombre_arreglo[tamaño] tipo_de_dato;", "tipo_de_dato[tamaño] nombre_arreglo;", "tipo_de_dato nombre_arreglo[tamaño];"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un archivo en C?",
+    "posiblesRespuestas": ["Una variable que almacena múltiples valores.", "Una estructura que contiene información sobre un objeto.", "Un conjunto de datos relacionados que se almacenan en un medio de almacenamiento."],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Cuál de las siguientes opciones describe correctamente la sintaxis para abrir un archivo en C?",
+    "posiblesRespuestas": ["fopen('nombre_archivo', modo);", "open('nombre_archivo', modo);", "fileopen('nombre_archivo', modo);"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un operador en C?",
+    "posiblesRespuestas": ["Un tipo de dato utilizado para almacenar números enteros.", "Un símbolo que realiza una operación en uno o más operandos.", "Una estructura que contiene información sobre un objeto."],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una sentencia if en C?",
+    "posiblesRespuestas": ["Una declaración que define un nuevo tipo de dato.", "Una estructura que se utiliza para tomar decisiones basadas en una condición.", "Una variable que almacena una dirección de memoria."],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de una sentencia if en C?",
+    "posiblesRespuestas": ["if (condición) (código a ejecutar si la condición es verdadera;)", "if condición {código a ejecutar si la condición es verdadera;}", "if (condición) {código a ejecutar si la condición es verdadera;}"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es verdadera sobre los operadores en C?",
+    "posiblesRespuestas": ["El operador ^ se utiliza para realizar una operación OR exclusiva", "El operador % se utiliza para realizar una operación de módulo.", "El operador ! llamado lógico NOT. Se utiliza para invertir el estado lógico de su operando."],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es verdadera sobre los punteros en C?",
+    "posiblesRespuestas": ["Los punteros se pueden utilizar para referencia y manipular estructuras de datos.", "Los punteros son una forma de almacenar múltiples valores en una sola variable.", "Los punteros se utilizan para almacenar direcciones de memoria."],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},  {
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de un bucle for en C?",
+    "posiblesRespuestas": ["for (int i=0; i<n; i++) {cuerpo del bucle}", "for (int i=10; i>n; i--) {cuerpo del bucle}", "for (i<n; int i=0; i++) {cuerpo del bucle}"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es verdadera sobre los arreglos en C?",
+    "posiblesRespuestas": ["Los arreglos pueden contener elementos de diferentes tipos de datos.", "Los arreglos tienen un tamaño fijo una vez que se declaran.", "Los arreglos son variables estructuradas como cadena de caracteres."],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es verdadera sobre las declaraciones de variables en C?",
+    "posiblesRespuestas": ["Las variables pueden ser declaradas en cualquier parte del programa.", "Las variables deben ser declaradas al principio del bloque de código donde serán utilizadas", "La forma estándar para declarar una variable es colocar su tipo antes del nombre de la variable."],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente el if-else en C?",
+    "posiblesRespuestas": ["Este es usado para hacer siclos infinitos.", "Este permite elegir entre dos opciones.", "Este funciona verificando la condición ingresada y de acuerdo a su valor de verdad (falso o verdadero) lleva a cabo o no una serie de instrucciones."],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de una función en C?",
+    "posiblesRespuestas": ["tipo_de_retorno nombre_de_la_función(argumento1, argumento2) {cuerpo de la función}", "tipo_de_retorno nombre_de_la_función {argumento1, argumento2} (cuerpo de la función)", "tipo_de_retorno nombre_de_la_función() {cuerpo de la función}"],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es verdadera sobre las macros en C?",
+    "posiblesRespuestas": ["Las macros se definen utilizando la palabra clave define.", "Las macros son un alias que se puede incluir en el código el cual, al momento de compilar, será reemplazado por lo que se haya definido.", "Las macros son variables que pueden ser modificadas durante la ejecución del programa."],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es verdadera?",
+    "posiblesRespuestas": ["struct {tipo de dato nombre_variable1; tipo de dato nombre_variable2;}", "struct nombre_estructura {tipo de dato nombre_variable1; tipo de dato nombre_variable2;}", "struct calculo {int numero;  float resultado;}"],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un bucle en C?",
+    "posiblesRespuestas": ["Una estructura que se utiliza para tomar decisiones basadas en una condición.", "Una declaración que define un nuevo tipo de dato", "Una estructura que se utiliza para repetir un bloque de código varias veces.", "Una estructura que hace una pregunta. Si la respuesta requiere acción, se ejecuta."],
+    "respuestasCorrectas": [2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de un bucle while en C?",
+    "posiblesRespuestas": ["while (condición) {código a ejecutar;}", "while {condición} (código a ejecutar;)", "while (código a ejecutar) {condición;}", "while(numero!=j){ numero+=n}", "while (repetitiva mientras) {código a ejecutar;}"],
+    "respuestasCorrectas": [0,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de un bucle do-while en C?",
+    "posiblesRespuestas": ["do {código a ejecutar} while (condición);", "do { acción a realizar ; }while (condicion_a_evaluar);", "while (condición) {código a ejecutar;} do;", "do {condición} while (código a ejecutar;)", "do {numero+=n} while (numero!=j);"],
+    "respuestasCorrectas": [0,1,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un switch en C?",
+    "posiblesRespuestas": ["Una estructura que se utiliza para tomar decisiones basadas en una condición.", "Una declaración que define un nuevo tipo de dato.", "Una estructura que permite seleccionar, por medio de una expresión, el siguiente bloque de instrucciones a ejecutar de entre varios posibles.", "Una estructura que se utiliza para tomar decisiones basadas en múltiples casos", "Sirve para escribir una instrucción alternativa múltiple."],
+    "respuestasCorrectas": [2,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe correctamente la sintaxis de un arreglo en C?",
+    "posiblesRespuestas": ["int arreglo[];", "int arreglo[10];", "c) int arreglo = {1, 2, 3};", "int arreglo[3]= {1, 2, 3};"],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un operador lógico en C?",
+    "posiblesRespuestas": ["Un símbolo que realiza una operación en uno o más operandos.", "Es un símbolo que le dice al compilador que realice funciones matemáticas o lógicas específicas", "Un tipo de dato utilizado para almacenar números enteros.", "Un símbolo que nos sirve para comparar o analizar dos (o en ocasiones más) condiciones.", "Un símbolo que se utiliza para combinar o invertir valores booleanos."],
+    "respuestasCorrectas": [1,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es un operador lógico en C?",
+    "posiblesRespuestas": ["+", "||", "!", "&&", "/"],
+    "respuestasCorrectas": [1,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una constante en C?",
+    "posiblesRespuestas": ["Una estructura que se utiliza para tomar decisiones basadas en una condición.", "Valor fijo que no se puede cambiar después de la definición", "Una estructura que se utiliza para repetir un bloque de código varias veces.", "Un valor que no puede ser modificado durante la ejecución del programa.", "Son campos cuyos valores se establecen en tiempo de compilación y nunca se pueden cambiar."],
+    "respuestasCorrectas": [1,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una cadena de caracteres en C?",
+    "posiblesRespuestas": ["Son un tipo particular de vectores.", "Una secuencia de caracteres almacenados en una matriz.", "Una estructura que se utiliza para repetir un bloque de código varias veces.", "Una secuencia de caracteres que se utiliza para representar texto.", "Un tipo de dato utilizado para almacenar números enteros."],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un operador de asignación en C?",
+    "posiblesRespuestas": ["Un símbolo que puede transformar y asignar valores en una única operación.", "Asigna el valor de su operando de la derecha a una variable", "Un tipo de dato utilizado para almacenar números enteros.", "Un tipo de dato utilizado para almacenar números decimales.", "Un símbolo que se utiliza para asignar un valor a una variable."],
+    "respuestasCorrectas": [0,1,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es un auto-operaciones en C?",
+    "posiblesRespuestas": ["+=", " -", "=", "/=", "*="],
+    "respuestasCorrectas": [0,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n //programa en C que le pida al usuario dos números y calcule la suma de ambos \n int main() {  \n int num1, num2, suma;  \n  printf('Ingrese el primer número: ');  \n  scanf(, &num1); \n  printf('Ingrese el segundo número: ');   \n scanf('%d', &num2);  \n  suma = num1 + num2;   \n printf('La suma de %d y %d es %d\n', num1, num2, suma);  \n  return 0;}",
+    "posiblesRespuestas": ["%d"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código:\n // programa en C que le pida al usuario un número y determine si es par o impar. \nint main() {  \n  int num;   \nprintf('Ingrese un número: ');   \nscanf('%d', &num);  \n if() {    \n  printf('%d es un número par\n', num);  \n } else { \n     printf('%d es un número impar\n', num);  \n }  \n return 0;}",
+    "posiblesRespuestas": ["num % 2 == 0"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n// programa en C que le pida al usuario un número y calcule su factorial.\n int main() { \n  int num, i, factorial=1;   \n printf('Ingrese un número: ');  \n scanf('%d', &num);  \n if(num < 0) {  \n    printf('No se puede calcular el factorial de números negativos\n'); \n  } else {\n      for(i=1; i<=num; i++) {     \n    factorial = factorial * i;     }\n      printf('El factorial de %d es %d\n', num, factorial); \n  }  }",
+    "posiblesRespuestas": ["return 0;"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n  // programa en C que le pida al usuario un número y determine si es primo o no. \n int main() {  \n int num, i, es_primo=1;   \n printf('Ingrese un número: ');  \n scanf('%d',);   \n if(num <= 1) {   \n   printf('%d no es un número primo\n', num);   } else {     \n for(i=2; i<=num/2; i++) {      \n   if(num % i == 0) {          \n  es_primo = 0;       \n     break;         }      }     \n if(es_primo == 1) {     \n    printf('%d es un número primo\n', num);      } else {      \n   printf('%d no es un número primo\n', num);      }   }  \n return 0;}",
+    "posiblesRespuestas": ["&num"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n  // programa en C que lea un arreglo de números enteros y calcule su promedio.  \n  int main() {    \n int n, i, arreglo[100], suma=0;   \n  float promedio;    \n printf('Ingrese la cantidad de elementos del arreglo: ');   \n  scanf('%d', &n);   \n  printf('Ingrese los elementos del arreglo:\n');   \n  for(i=0; i<n; i++) {      \n  scanf('%d', &arreglo[i]);    \n    suma = suma + arreglo[i];   }   \n  promedio = (float)suma;  \n   printf('El promedio de los elementos del arreglo es %.2f\n',);   \n  return 0;}",
+    "posiblesRespuestas": ["promedio"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n// programa en C que lea un arreglo de números enteros y encuentre el número máximo y el número mínimo. \nint main() {   \n int n, i, arreglo[100], maximo, minimo;  \n printf(‘Ingrese la cantidad de elementos del arreglo: ‘);  \n scanf(‘%d’, &n);  \n printf(‘Ingrese los elementos del arreglo:\n’);  \n for(i=0; i<n; i++) {     scanf(‘%d’, &arreglo[i]);     \n if(i == 0) {       \n  maximo = arreglo[i];    \n     minimo = arreglo[i];     } else {         if() {         \n   maximo = arreglo[i];         }      \n   if(arreglo[i] < minimo) {     \n       minimo = arreglo[i];         }      }   }  \n printf(‘El número máximo del arreglo es %d\n’, maximo);   printf(‘El número mínimo del arreglo es %d\n’, minimo);   return 0;}",
+    "posiblesRespuestas": ["arreglo[i] > máximo"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: // programa en C que lea dos arreglos de números enteros y los multiplique elemento por elemento. \n  int main() {    \n int n, i, arreglo1[100], arreglo2[100], producto[100];  \n  printf(‘Ingrese la cantidad de elementos de los arreglos: ‘);   scanf(‘%d’, &n); \n   printf(‘Ingrese los elementos del primer arreglo:\n’);  \n  for(i=0; i<n; i++) {   \n    scanf(‘%d’, &arreglo1[i]);   }  \n  printf(‘Ingrese los elementos del segundo arreglo:\n’);\n    for(i=0; i<n; i++) {     \n  scanf(‘%d’, &arreglo2[i]);   }  \n  printf(‘El producto elemento por elemento de los arreglos es:\n’); \n   for(i=0; i<n; i++) { \n      producto[i] = arreglo1[i] * arreglo2[i];    \n   printf();   }  \n  return 0;}",
+    "posiblesRespuestas": ["%d , producto[i]"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: // un programa en C que lea un arreglo de números enteros y elimine los números repetidos. \n int main() {  \n  int n, i, arreglo[100], nuevo_arreglo[100], repetido; \n   printf(‘Ingrese la cantidad de elementos del arreglo: ‘); \n  scanf(‘%d’ &n);   \n printf(‘Ingrese los elementos del arreglo:\n’);   for(i=0; i<n; i++) {   \n  scanf(‘%d’, &arreglo[i]);   }  \n j = 0;   for(i=0; i<n; i++) {      repetido = 0;      for(int k=0; k<j; k++) {         if(nuevo_arreglo[k] == arreglo[i]) {            repetido = 1;    \n        break;         }      }     \n if(!repetido) {         nuevo_arreglo[j] = arreglo[i];       \n  j++;      }   }   \n printf(‘El nuevo arreglo sin números repetidos es:\n’);   for(i=0; i<j; i++) {     \n printf(‘%d ‘, nuevo_arreglo[i]);   }   \n return 0;}",
+    "posiblesRespuestas": ["%d"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código://programa para calcular si el año es bisiesto o no. int main(){ int year; printf('Ingrese el año para evaluar si es bisiesto o no: '); \n scanf('%d', &year); \n if((year%4)==0){printf('El año ingresado es Bisiesto..')}else{ \n printf('El año ingresado no es Bisiesto...')} \n return 0;} ",
+    "posiblesRespuestas": ["printf"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: //programa que convierte un numero a binario. int main(){ int n, aux, r; \n printf(‘Ingrese un numero y lo convertiremos a binario: ‘); \n scanf('%d', &n); \n aux=n; \n while (aux>= 2){ r=aux%2; \n printf('%d', r); \n aux = aux/2; } print(); return 0; }",
+    "posiblesRespuestas": ["%d, aux"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+}]
