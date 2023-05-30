@@ -1,0 +1,295 @@
+[{
+    "pregunta": "En Python, las variables deben ser declaradas antes de ser utilizadas.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Python es un lenguaje de programación compilado.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El operador == en Python se utiliza para comparar dos valores y determinar si son idénticos.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "En Python, la palabra clave break se utiliza para salir de un bucle",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El operador % en Python se utiliza para la operación de exponenciación.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "La función input() en Python permite al usuario ingresar datos desde la consola.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "En Python, una lista puede contener elementos de diferentes tipos de datos.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El operador += en Python es equivalente a la operación de suma.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "En Python, la indentación es opcional.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "La función len() en Python devuelve la longitud de una cadena o una lista.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": " ¿Qué significa la sigla 'PEP' en referencia al desarrollo de Python?",
+    "posiblesRespuestas": ["Personal Environment Package", "Python Enhancement Proposal", "Programming Execution Process", "Python Extended Platform", "None of the above"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes NO es una estructura de datos en Python?",
+    "posiblesRespuestas": ["Lista", "Conjunto", "Matriz", "Dicionario", "Todos son estructuras de datos en Python"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué función se utiliza para obtener la longitud de una lista en Python?",
+    "posiblesRespuestas": ["count()", "len()", "size()", "length()", "None of the above"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes NO es una palabra clave en Python?",
+    "posiblesRespuestas": ["def", "class", "var", "if", "Todas son palabras clave en Python"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la salida de este código en Python?: `print('Hola' + 2 + 'mundo')`",
+    "posiblesRespuestas": ["Hola2mundo", "Hola mundo", "Error de sintaxis", "None of the above"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la palabra clave utilizada para definir una variable global en Python?",
+    "posiblesRespuestas": ["local", "global", "var", "const"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué función se utiliza para convertir un número en una cadena de texto en Python?",
+    "posiblesRespuestas": ["str()", "int()", "float()", "string()"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Cuál es la forma correcta de definir una función en Python?",
+    "posiblesRespuestas": ["def funcion():", "define funcion():", "fun funcion():"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la palabra clave utilizada para definir una lista en Python?",
+    "posiblesRespuestas": ["array", "list", "lista", "tuples"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la palabra clave utilizada para definir una condición en Python?",
+    "posiblesRespuestas": ["condition", "if", "while"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Tipos de sentancias para el control de flujo en python",
+    "posiblesRespuestas": ["if", "for", "range"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es el método utilizado para eliminar un elemento de una lista en Python?",
+    "posiblesRespuestas": ["remove()", "pop()", "delete()", "erase()"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué método se utiliza para copiar una lista en Python?",
+    "posiblesRespuestas": ["copy() ", "copy.deepcopy()", "clone()"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Como insertar un comentario",
+    "posiblesRespuestas": ["#", "(tres comillas)", "/* comentario*/"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué codificación utiliza Python 3 para los strings?",
+    "posiblesRespuestas": ["Unicode", "ASCII", "unicode rocks!", "UTF-8"],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de estos tipos de datos es mutable?",
+    "posiblesRespuestas": ["Listas", "Diccionario", "Colas"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de estos son tipos de bucles en python?",
+     "posiblesRespuestas":["for", "switch", "while", "if"],
+      "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es verdadera sobre los operadores en Python?",
+    "posiblesRespuestas": ["El operador ^ se utiliza para realizar una operación OR exclusiva.", "El operador % se utiliza para realizar una operación de módulo.", "El operador ! llamado lógico NOT. Se utiliza para invertir el estado lógico de su operando."],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es verdadera sobre los arreglos en Python?",
+    "posiblesRespuestas": ["Los arreglos pueden contener elementos de diferentes tipos de datos.", "Los arreglos tienen un tamaño fijo una vez que se declaran.", "Los arreglos son variables estructuradas como cadena de caracteres."],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de estos tipos de datos es inmutable?",
+    "posiblesRespuestas": ["String", "Integer", "Boolean", "Char"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Opciones para definir correctamente un arreglo en python",
+    "posiblesRespuestas": ["arr = [1, 2, 3]", "int arr={1,2,3}", "arr = list((1, 2, 3))", "arr = [i for i in range(1, 4)]"],
+    "respuestasCorrectas": [0,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es un operador lógico en Python?",
+    "posiblesRespuestas": ["+", "||", "-", "&&", "!"],
+    "respuestasCorrectas": [1,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones es un auto-operaciones en Python?",
+    "posiblesRespuestas": ["+=", "-", "=", "/=", "*="],
+    "respuestasCorrectas": [0,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un switch en C?",
+    "posiblesRespuestas": ["Una estructura que se utiliza para tomar decisiones basadas en una condición.", "Una declaración que define un nuevo tipo de dato.", "Una estructura que permite seleccionar, por medio de una expresión, el siguiente bloque de instrucciones a ejecutar de entre varios posibles.", "Una estructura que se utiliza para tomar decisiones basadas en múltiples casos.", "Sirve para escribir una instrucción alternativa múltiple."],
+    "respuestasCorrectas": [2,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una constante en C?",
+    "posiblesRespuestas": ["Una estructura que se utiliza para tomar decisiones basadas en una condición.", "Valor fijo que no se puede cambiar después de la definición", "Una estructura que se utiliza para repetir un bloque de código varias veces.", "Un valor que no puede ser modificado durante la ejecución del programa.", "Son campos cuyos valores se establecen en tiempo de compilación y nunca se pueden cambiar."],
+    "respuestasCorrectas": [1,3,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una cadena de caracteres en C?",
+    "posiblesRespuestas": ["Son un tipo particular de vectores.", "Una secuencia de caracteres almacenados en una matriz.", "Una estructura que se utiliza para repetir un bloque de código varias veces.", "Una secuencia de caracteres que se utiliza para representar texto.", "Un tipo de dato utilizado para almacenar números enteros."],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué tipo de datos soporta Python?",
+    "posiblesRespuestas": ["Enteros", "Flotantes", "Cadena de caracteres", "Imegenes"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué tipo de estructuras de datos soporta Python?",
+    "posiblesRespuestas": ["Listas", "Sets", "Tuplas", "Struct"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres palabras clave utilizadas en Python para la gestión de memoria dinámica? ",
+    "posiblesRespuestas": ["delete", "malloc", "calloc", "realloc"],
+    "respuestasCorrectas": [1,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n for elemento in mi_lista: \n   print()",
+    "posiblesRespuestas": ["elemento"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n //leer un archivo \n with open('mi_archivo.txt', 'r') as archivo: \n     contenido = archivo.read() \n    print()",
+    "posiblesRespuestas": ["contenido"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n/ / Escribe un código en Python que tome una lista de números y devuelva la suma de todos los números pares en la lista. def suma_pares(lista): \n    suma = 0 \n     for numero in lista: \n         if:            suma += numero \n return suma \n # Ejemplo de uso \n mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9] \n print(suma_pares(mi_lista))",
+    "posiblesRespuestas": ["numero % 2 == 0"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cómo se realiza una comparación de igualdad en Python? (comparando a y b)",
+    "posiblesRespuestas": ["a==b"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cómo se crea una lista vacía en Python? (llamandola 'mi_lista')",
+    "posiblesRespuestas": ["mi_lista =[]"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escribe un código en Python que tome una lista de palabras y devuelva la longitud de la palabra más larga en la lista. \n def longitud_palabra_mas_larga(lista_palabras): \n longitud_maxima = 0 \n   for palabra in lista_palabras: \n       if len(palabra) > longitud_maxima: \n    longitud_maxima = len(palabra) \n     return \n # Ejemplo de uso mi_lista = ['hola', 'mundo', 'programacion', 'python']\nprint(longitud_palabra_mas_larga(mi_lista))",
+    "posiblesRespuestas": ["longitud_maxima"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n \\Escribe un código en Python que tome una lista de números y devuelva una lista que contenga solo los números que sean mayores que un valor específico. \n def numeros_mayores_que_valor(lista_numeros, valor):    numeros_mayores = []  \n     for numero in lista_numeros:  \n         if > valor:  \n       numeros_mayores.append(numero)  \n    return numeros_mayores. \n # Ejemplo de uso \n mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9] \n mi_valor = 4 \n print(numeros_mayores_que_valor(mi_lista, mi_valor))",
+    "posiblesRespuestas": ["numero"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n \\ Escribe un código en Python que tome dos listas de números y devuelva una lista que contenga solo los números que sean comunes entre ambas listas. \n def numeros_pares(lista_numeros): \n   pares = [] \n    for numero in lista_numeros: \n         if numero % 2 == 0:  \n   pares.append(numero)  \n     return pares \n  # Ejemplo de uso \n  mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]  \n print(numeros_pares())",
+    "posiblesRespuestas": ["mi_lista"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escribe un código en Python que tome dos listas de números y devuelva una lista que contenga solo los números que sean comunes entre ambas listas. \n def numeros_comunes(): \n     comunes = [] \n for numero in lista1: \n         if numero in lista2: \n             comunes.append(numero) \n     return comunes \n # Ejemplo de uso  \n mi_lista1 = [1, 2, 3, 4, 5]  \n mi_lista2 = [3, 4, 5, 6, 7] \n print(numeros_comunes(mi_lista1, mi_lista2))",
+    "posiblesRespuestas": ["lista1, lista2"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n //Escribe una función en Python que tome una lista de números y devuelva una lista que contenga solo los números que sean primos. \n def numeros_primos(lista_numeros): \n    primos = [] \n   for numero in lista_numeros: \n      if numero > 1: \n  es_primo = True \n for i in range(2, int(numero/2)+1): \n  if (numero % i) == 0: \n es_primo = False \n   break \n if es_primo: \n primos.append(numero) \n     return ",
+    "posiblesRespuestas": ["primos"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+}]
