@@ -1,0 +1,301 @@
+[{
+    "pregunta": "Java es un lenguaje de programación orientado a objetos. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java es un lenguaje de programación interpretado. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java se ejecuta en una máquina virtual llamada JVM",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java es un lenguaje de programación de código abierto",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java es un lenguaje de programación que solo se ejecuta en sistemas operativos Windows. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java esun lenguaje de programación que no permite la programación concurrente",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java no tiene recolector de basura (garbage collector). ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java es un lenguaje de programación que solo se utiliza para aplicaciones de escritorio. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java es un lenguaje de programación que solo se utiliza para aplicaciones de bajo nivel. ",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Java es un lenguaje de programación que solo se utiliza para aplicaciones de propósito general.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un objeto en Java?",
+    "posiblesRespuestas": ["Una variable que almacena un valor numérico.", "Una instancia de una clase."],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es un método en Java?",
+    "posiblesRespuestas": ["Una función que se define dentro de una clase.", "Una variable que almacena un valor numérico."],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes es una forma de definir una clase en Java?",
+    "posiblesRespuestas": ["define MiClase {", "public class MiClase {"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes es una forma de crear un objeto en Java?",
+    "posiblesRespuestas": ["int mi_objeto = new Object();", "MiClase mi_objeto = new MiClase();"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes palabras clave se utiliza para definir una clase en Java?",
+    "posiblesRespuestas": ["class", "def"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes es una forma de comentar un código en Java?",
+    "posiblesRespuestas": ["// Este es un comentario", "/Este es un comentario/"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Qué es un constructor en Java?",
+    "posiblesRespuestas": ["Un método que se llama automáticamente cuando se crea un objeto de una clase.", "Una variable que almacena un valor numérico."],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes es una forma de declarar una variable en Java?",
+    "posiblesRespuestas": ["var mi_variable = 5;", "int mi_variable = 5;"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes es una forma de comparar dos valores en Java?",
+    "posiblesRespuestas": ["a==b", "a=b"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes es una forma de imprimir un mensaje en la consola en Java?",
+    "posiblesRespuestas": ["console.log('Este es un mensaje')", "System.out.println('Este es un mensaje')"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe adecuadamente la estructura de un bucle for en Java?",
+    "posiblesRespuestas": ["for (int i = 0; i < 10; i++) {}", ") for (i = 0; i < 10; i++) {}", "for (int i = 0; i < 10;) {}", "for (int j=10; j> i+1; j--) {}"],
+    "respuestasCorrectas": [0,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe adecuadamente el uso de la palabra clave 'static' en Java?",
+    "posiblesRespuestas": ["Para indicar que una variable no puede ser modificada.", "Para indicar que un método o variable pertenece a la clase en lugar de a una instancia de la clase.", "Para indicar que una clase no puede ser heredada.", "Para que puedan ser accedidos desde cualquier parte del código"],
+    "respuestasCorrectas": [1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es extends en java?",
+    "posiblesRespuestas": ["se puede usar para crear una subclase a partir de clases personalizadas.", "Permite heredar estilos de un selector en otro.", "Clona una clase."],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe adecuadamente la sintaxis para declarar una clase abstracta en Java?",
+    "posiblesRespuestas": ["abstract class MiClase {}", "public class abstractMiClase {}", "public abstract class MiClase {}", "private abstract class MiClase {}"],
+    "respuestasCorrectas": [2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe adecuadamente el concepto de encapsulamiento en Java?",
+    "posiblesRespuestas": ["La capacidad de una clase para heredar atributos y métodos de una clase padre.", "La capacidad de una clase para ocultar ciertos detalles de implementación y exponer solo una interfaz pública.", "Permite definir niveles de visibilidad para los elementos de la clase."],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál(es) de los siguientes patrones de diseño de software en Java se utilizan para crear objetos sin exponer la lógica de creación al cliente y referirse a ellos solo a través de una interfaz común? ",
+    "posiblesRespuestas": ["Constructor", "Factory", "Singleton", "Observer"],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de las siguientes opciones describe adecuadamente la sintaxis para declarar una interfaz en Java?",
+    "posiblesRespuestas": ["interface MiInterfaz {}", "public interface MiInterfaz {}", "public class MiInterfaz {}", "abstract  interface MiInterfaz {}"],
+    "respuestasCorrectas": [1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una excepción en Java?",
+    "posiblesRespuestas": ["Un evento que se produce cuando se ejecuta el programa de forma que interrumpe el flujo normal de instrucciones.", "Son situaciones anómalas que pueden suceder cuando ejecutamos un programa.", "Analiza el código y busca su error."],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es la sobrecarga de métodos en Java?",
+    "posiblesRespuestas": ["Es la capacidad de tener varios métodos con el mismo nombre en una misma clase.", "Clonación de métodos de una misma clase.", "Creación de varios métodos con el mismo nombre pero con diferente lista de tipos de parámetros."],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál(es) de los siguientes son tipos de datos primitivos en Java?",
+    "posiblesRespuestas": ["int", "double", "String"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son los tipos de estructuras de control en Java? ",
+    "posiblesRespuestas": ["Estructuras de control de selección", "Estructuras de control de bucle ", "Estructuras de control de ", "Estructuras de control de excepciones "],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son los cuatro principios de la programación orientada a objetos (POO) en Java",
+    "posiblesRespuestas": ["Encapsulamiento", "Herencia", "Polimorfismo", "Modularidad "],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál(es) de los siguientes son tipos de datos primitivos en Java? ",
+    "posiblesRespuestas": ["int", "double", "String", "boolean"],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál(es) de los siguientes enunciados son verdaderos acerca de la programación multihilo en Java?",
+    "posiblesRespuestas": ["Los hilos en Java siempre se ejecutan en diferentes CPU.", "Los hilos pueden compartir datos y recursos. ", "Los hilos se usan para garantizar la concurrencia y paralelismo. ", "La sincronización se usa para evitar problemas de concurrencia"],
+    "respuestasCorrectas": [1,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál(es) de los siguientes enfoques se pueden utilizar para manejar excepciones en Java?",
+    "posiblesRespuestas": ["Ignorar la excepción ", "Manejar la excepción en una cláusula try-catch ", ") Propagar la excepción a un método que llama", "Utilizar la cláusula 'finally' para realizar una limpieza de recursos."],
+    "respuestasCorrectas": [1,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la diferencia entre una clase abstracta y una interfaz en Java?",
+    "posiblesRespuestas": ["Una clase abstracta puede tener métodos con implementación, mientras que una interfaz solo puede tener métodos abstractos.", "Una clase abstracta puede tener campos, mientras que una interfaz no puede tener campos.", "Una clase abstracta puede implementar métodos de otras clases o interfaces, mientras que una interfaz no puede implementar métodos.", "Una clase abstracta se define utilizando la palabra clave abstract, mientras que una interfaz se define utilizando la palabra clave interface."],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué es una clase final en Java?",
+    "posiblesRespuestas": ["Una clase que no puede ser heredada por otras clases.","Una clase que no puede ser instanciada.", "Una clase que no puede tener métodos abstractos.", "Una clase que no puede tener métodos estáticos.", "Una clase que no le interesa crear clases derivadas de dicha clase."],
+    "respuestasCorrectas": [0,1,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son los tipos de datos no primitivos en Java? ",
+    "posiblesRespuestas": ["String", "Integer", "Array", "Float", "Boolean"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál(es) de los siguientes operadores se utilizan en Java para operaciones Bit a Bit?",
+    "posiblesRespuestas": ["&", "|", "^", "!"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son los tipos de clases en Java? ",
+    "posiblesRespuestas": ["Clases abstractas ", "Clases concretas", "Clases finales", "Clases estáticas"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que imprima 'Hola, mundo' en la consola. \n public class HolaMundo { \n     public static void main(String[] args) { \n   ('Hola, mundo');\n  }\n }",
+    "posiblesRespuestas": ["System.out.println"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que calcule la suma de dos números enteros y muestre el resultado en la consola. \n public class Suma { \n public static void main(String[] args) { \n = 5; \n  int num2 = 7; \n       int suma = num1 + num2; \n  System.out.println('La suma de ' + num1 + ' y ' + num2 + ' es ' + suma); \n  } \n }",
+    "posiblesRespuestas": ["int num1"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea un número entero desde la consola y muestre si es par o impar. \n import java.util.Scanner;  \n public class ParImpar { \n  public static void main(String[] args) { \n canner scanner = new Scanner(System.in); \n   System.out.print('Ingrese un número entero: '); \n int num = scanner.nextInt(); \n  if () { \n System.out.println(num + 'es par'); \n } else { \n System.out.println(num + ' es impar'); \n  }  } }",
+    "posiblesRespuestas": ["num % 2 == 0"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea un número entero desde la consola y muestre su tabla de multiplicar del 1 al 10. \n public class TablaMultiplicar { \n public static void main(String[] args) { \n Scanner scanner = new Scanner(System.in); \n System.out.print('Ingrese un número entero: '); \n int num = scanner.nextInt(); \n for (= 1; i <= 10; i++) { \n System.out.println(num + ' x ' + i + ' = ' + (num * i)); \n } \n }\n }",
+    "posiblesRespuestas": ["int i"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea dos números enteros desde la consola y muestre el mayor de ellos. \n import java.util.Scanner; \n public class Mayor {  \n public static void main(String[] args) {  \n Scanner scanner = new Scanner(System.in); \n System.out.print('Ingrese el primer número entero: ');  \n int num1 = scanner.nextInt(); \n System.out.print('Ingrese el segundo número entero: ');  \n int num2 = scanner.nextInt(); \n if () {  \n System.out.println(num1 + ' es mayor que ' + num2); \n } else if (num1 < num2) {  \n System.out.println(num2 + ' es mayor que ' + num1); \n } else {  \n System.out.println(num1 + ' y ' +num2 + 'son iguales'); \n  } \n } \n }",
+    "posiblesRespuestas": ["num1 > num2"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n \\ Escriba un programa que calcule la media aritmética de tres números enteros y muestre el resultado en la consola. \n import java.util.Scanner; \n public class MediaAritmetica { \n public static void main(String[] args) { \n Scanner scanner = new Scanner(System.in); \n System.out.print('Ingrese el primer número entero:'); \n   int num1 = scanner.nextInt(); \n System.out.print('Ingrese el segundo número entero: '); \n int num2 = scanner.nextInt(); \n System.out.print('Ingrese el tercer número entero: '); \n int num3 = scanner.nextInt(); \n double media = () / 3.0; \n System.out.println('La media aritmética de ' + num1 + ', ' + num2 + ' y ' + num3 + 'es ' + media); \n } \n }",
+    "posiblesRespuestas": ["num1 + num2 + num3"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea un número entero positivo desde la consola y muestre su factorial. \n import java.util.Scanner; \n public class Factorial { \n public static void main(String[] args) { \n Scanner scanner = new Scanner(); \n System.out.print('Ingrese un número entero positivo: '); \n int num = scanner.nextInt(); \n  int factorial = 1; \n  for (int i = 1; i <=num; i++) { \n factorial *= i; \n } \n System.out.println('El factorial de ' + num + 'es ' + factorial); \n } \n }",
+    "posiblesRespuestas": ["System.in"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea una cadena de texto desde la consola y muestre su longitud. \n import java.util.Scanner; public class LongitudCadena { \n public static void main(String[] args) { \n Scanner scanner = Scanner(System.in); \n System.out.print('Ingrese una cadena de texto: '); \n String cadena = scanner.nextLine(); \n  int longitud = cadena.length();\n System.out.println('La longitud de la cadena ' + cadena + ' es' + longitud); \n } \n}",
+    "posiblesRespuestas": ["new"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea una cadena de texto desde la consola y muestre su reverso. \n import java.util.Scanner; \n public class ReversoCadena { \n public static void main(String[] args) { \nScanner scanner = new Scanner(System.in); \n System.out.print('Ingrese una cadena de texto: '); \n String cadena = scanner. \n String reverso = ''; \n for (int i = cadena.length() - 1; i >= 0; i--) { \n reverso += cadena.charAt(i); \n } \n System.out.println('El reverso de la cadena ' + cadena + ' es ' + reverso + '''); \n  } \n }",
+    "posiblesRespuestas": ["nextLine();"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n \\ Escriba un programa que lea una cadenade texto desde la consola y muestre si es un palíndromo (es decir, si se lee igual de izquierda a derecha que de derecha a izquierda). \n import java.util.Scanner; \n public class Palindromo { \n void main(String[] args) {  \n Scanner scanner = new Scanner(System.in); \n System.out.print('Ingrese una cadena de texto: ');  \n String cadena = scanner.nextLine(); \n String reverso ='';  \n for (int i = cadena.length() - 1; i >= 0; i--) {  \n reverso += cadena.charAt(i); \n  }  \n  if (cadena.equals(reverso)) {  \n System.out.println('La cadena ' + cadena + ' es un palíndromo');  \n } else {  \n System.out.println('La cadena ' + cadena + ' no es un palíndromo');  \n }  \n} \n}",
+    "posiblesRespuestas": ["public static"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+}]
