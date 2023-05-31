@@ -5,17 +5,124 @@
  */
 package vistas;
 
+import java.awt.Color;
+import java.awt.Container;
+import java.util.Arrays;
+import javax.swing.BorderFactory;
+import javax.swing.border.Border;
+import modelos.Participante;
+import modelos.Question;
+
 /**
  *
  * @author claud
  */
-public class totalpreguntas1 extends javax.swing.JPanel {
+public class Respuestas extends javax.swing.JPanel {
+
+    private Question[] preguntas;
+    private int pos;
+    private Participante participante;
+    private PrincipalView cronometro;
+
+    public static boolean comprobarRespuesta(Question pregunta) {
+        String[] posiblesRespuestas = pregunta.getPosiblesRespuestas();
+
+        if (posiblesRespuestas.length == 1) {
+            String respuestaTexto = pregunta.getRespuestaTextoUsuarioo();
+
+            return respuestaTexto.equalsIgnoreCase(posiblesRespuestas[0]);
+        }
+
+        int[] respuestasCorrectas = pregunta.getRespuestasCorrectas();
+        int[] respuestasUsuario = pregunta.getRespuestasDelUsuario();
+
+        if (respuestasCorrectas.length != respuestasUsuario.length) {
+            return false;
+        }
+
+        if (posiblesRespuestas.length == 2 || respuestasCorrectas.length == 1) {
+            return (respuestasUsuario[0] == respuestasCorrectas[0]);
+        }
+
+        if (respuestasCorrectas.length > 1 && respuestasCorrectas.length < 4) {
+            Arrays.sort(respuestasCorrectas);
+            Arrays.sort(respuestasUsuario);
+
+            boolean equal = true;
+
+            for (int i = 0; i < respuestasCorrectas.length; i++) {
+                if (respuestasCorrectas[i] != respuestasUsuario[i]) {
+                    equal = false;
+                    break;
+                }
+            }
+
+            return equal;
+        }
+
+        return false;
+    }
 
     /**
      * Creates new form totalpreguntas1
      */
-    public totalpreguntas1() {
+    public Respuestas(Question[] preguntas, int pos, Participante participante, PrincipalView cronometro) {
+        Border bordeFalse = BorderFactory.createLineBorder(Color.red);
+        Border bordeTrue = BorderFactory.createLineBorder(Color.green);
+        this.cronometro = cronometro;
+
         initComponents();
+
+        this.preguntas = preguntas;
+        this.pos = pos;
+        this.participante = participante;
+        
+        
+        if (pos == 0) {
+            atras.setVisible(false);
+        }
+
+        if (pos == 20) {
+            siguiente.setVisible(false);
+        } else {
+            terminarRevision.setVisible(false);
+        }
+
+        pregunta1.setText(preguntas[pos].getPregunta());
+        pregunta2.setText(preguntas[pos + 1].getPregunta());
+        pregunta3.setText(preguntas[pos + 2].getPregunta());
+        pregunta4.setText(preguntas[pos + 3].getPregunta());
+        pregunta5.setText(preguntas[pos + 4].getPregunta());
+
+        if (Respuestas.comprobarRespuesta(preguntas[pos])) {
+            textArea1.setBorder(bordeTrue);
+        } else {
+            textArea1.setBorder(bordeFalse);
+        }
+
+        if (Respuestas.comprobarRespuesta(preguntas[pos + 1])) {
+            textArea2.setBorder(bordeTrue);
+        } else {
+            textArea2.setBorder(bordeFalse);
+        }
+
+        if (Respuestas.comprobarRespuesta(preguntas[pos + 2])) {
+            textArea3.setBorder(bordeTrue);
+        } else {
+            textArea3.setBorder(bordeFalse);
+        }
+
+        if (Respuestas.comprobarRespuesta(preguntas[pos + 3])) {
+            textArea4.setBorder(bordeTrue);
+        } else {
+            textArea4.setBorder(bordeFalse);
+        }
+
+        if (Respuestas.comprobarRespuesta(preguntas[pos + 4])) {
+            textArea5.setBorder(bordeTrue);
+        } else {
+            textArea5.setBorder(bordeFalse);
+        }
     }
 
     /**
@@ -29,7 +136,6 @@ public class totalpreguntas1 extends javax.swing.JPanel {
 
         jPanel3 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
-        Siguiente = new javax.swing.JButton();
         pregunta1 = new javax.swing.JLabel();
         pregunta2 = new javax.swing.JLabel();
         pregunta3 = new javax.swing.JLabel();
@@ -46,86 +152,70 @@ public class totalpreguntas1 extends javax.swing.JPanel {
         respuesta5 = new javax.swing.JScrollPane();
         textArea5 = new javax.swing.JTextArea();
         tituloInterfaz = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        terminarRevision = new javax.swing.JButton();
+        siguiente = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        atras = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(228, 251, 251));
 
         jPanel3.setBackground(new java.awt.Color(228, 251, 251));
 
-        Siguiente.setBackground(new java.awt.Color(255, 204, 0));
-        Siguiente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Siguiente.setForeground(new java.awt.Color(0, 0, 0));
-        Siguiente.setText("Siguiente");
-        Siguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Siguiente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SiguienteActionPerformed(evt);
-            }
-        });
-
         pregunta1.setBackground(new java.awt.Color(228, 251, 251));
         pregunta1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta1.setForeground(new java.awt.Color(0, 0, 0));
         pregunta1.setText("Pregunta #1 -----------------------------------");
 
         pregunta2.setBackground(new java.awt.Color(228, 251, 251));
         pregunta2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta2.setForeground(new java.awt.Color(0, 0, 0));
         pregunta2.setText("Pregunta #2 -----------------------------------");
 
         pregunta3.setBackground(new java.awt.Color(228, 251, 251));
         pregunta3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta3.setForeground(new java.awt.Color(0, 0, 0));
         pregunta3.setText("Pregunta #3 -----------------------------------");
 
         pregunta4.setBackground(new java.awt.Color(228, 251, 251));
         pregunta4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta4.setForeground(new java.awt.Color(0, 0, 0));
         pregunta4.setText("Pregunta #4 -----------------------------------");
 
         pregunta5.setBackground(new java.awt.Color(228, 251, 251));
         pregunta5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta5.setForeground(new java.awt.Color(0, 0, 0));
         pregunta5.setText("Pregunta #5 -----------------------------------");
 
-        textArea1.setBackground(new java.awt.Color(228, 251, 251));
+        textArea1.setEditable(false);
         textArea1.setColumns(20);
-        textArea1.setForeground(new java.awt.Color(0, 0, 0));
         textArea1.setLineWrap(true);
         textArea1.setRows(5);
         textArea1.setWrapStyleWord(true);
         textArea1.setBorder(null);
         respuesta1.setViewportView(textArea1);
 
-        textArea2.setBackground(new java.awt.Color(228, 251, 251));
+        textArea2.setEditable(false);
         textArea2.setColumns(20);
-        textArea2.setForeground(new java.awt.Color(0, 0, 0));
         textArea2.setLineWrap(true);
         textArea2.setRows(5);
         textArea2.setWrapStyleWord(true);
         textArea2.setBorder(null);
         respuesta2.setViewportView(textArea2);
 
-        textArea3.setBackground(new java.awt.Color(228, 251, 251));
+        textArea3.setEditable(false);
         textArea3.setColumns(20);
-        textArea3.setForeground(new java.awt.Color(0, 0, 0));
         textArea3.setLineWrap(true);
         textArea3.setRows(5);
         textArea3.setWrapStyleWord(true);
         textArea3.setBorder(null);
         respuesta3.setViewportView(textArea3);
 
-        textArea4.setBackground(new java.awt.Color(228, 251, 251));
+        textArea4.setEditable(false);
         textArea4.setColumns(20);
-        textArea4.setForeground(new java.awt.Color(0, 0, 0));
         textArea4.setLineWrap(true);
         textArea4.setRows(5);
         textArea4.setWrapStyleWord(true);
         textArea4.setBorder(null);
         respuesta4.setViewportView(textArea4);
 
-        textArea5.setBackground(new java.awt.Color(228, 251, 251));
+        textArea5.setEditable(false);
         textArea5.setColumns(20);
-        textArea5.setForeground(new java.awt.Color(0, 0, 0));
         textArea5.setLineWrap(true);
         textArea5.setRows(5);
         textArea5.setWrapStyleWord(true);
@@ -134,8 +224,46 @@ public class totalpreguntas1 extends javax.swing.JPanel {
 
         tituloInterfaz.setBackground(new java.awt.Color(228, 251, 251));
         tituloInterfaz.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        tituloInterfaz.setForeground(new java.awt.Color(0, 0, 0));
         tituloInterfaz.setText("Preguntas presentadas en la prueba");
+
+        jPanel1.setBackground(new java.awt.Color(228, 251, 251));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        terminarRevision.setBackground(new java.awt.Color(255, 204, 0));
+        terminarRevision.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        terminarRevision.setText("Terminar Revisión");
+        terminarRevision.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        terminarRevision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terminarRevisionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(terminarRevision, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 170, 40));
+
+        siguiente.setBackground(new java.awt.Color(255, 204, 0));
+        siguiente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        siguiente.setText("Siguiente");
+        siguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        siguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                siguienteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 130, 40));
+
+        jPanel2.setBackground(new java.awt.Color(228, 251, 251));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        atras.setBackground(new java.awt.Color(255, 153, 153));
+        atras.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        atras.setText("Atras");
+        atras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 100, 40));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -165,8 +293,10 @@ public class totalpreguntas1 extends javax.swing.JPanel {
                                 .addComponent(pregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, 830, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(23, 23, 23))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(Siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(364, 364, 364))))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(181, 181, 181)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(193, 193, 193))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,9 +325,11 @@ public class totalpreguntas1 extends javax.swing.JPanel {
                 .addComponent(pregunta5)
                 .addGap(18, 18, 18)
                 .addComponent(respuesta5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -212,13 +344,53 @@ public class totalpreguntas1 extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SiguienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SiguienteActionPerformed
+    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
+        Respuestas respuesta = new Respuestas(this.preguntas, this.pos + 5, this.participante, this.cronometro);
+
+        respuesta.setSize(880, 470);
+        respuesta.setVisible(true);
+
+        Container padre = this.getParent();
+
+        padre.removeAll();
+        padre.add(respuesta);
+        padre.revalidate();
+        padre.repaint();
+    }//GEN-LAST:event_siguienteActionPerformed
+
+    private void terminarRevisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarRevisionActionPerformed
+        datosFinalesPrueba finalizar = new datosFinalesPrueba(this.preguntas, this.participante, this.cronometro);
+        
+        finalizar.setSize(880, 470);
+        finalizar.setVisible(true);
+
+        Container padre = this.getParent();
+
+        padre.removeAll();
+        padre.add(finalizar);
+        padre.revalidate();
+        padre.repaint();
+    }//GEN-LAST:event_terminarRevisionActionPerformed
+
+    private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
+        Respuestas respuesta = new Respuestas(this.preguntas, this.pos - 5, this.participante, this.cronometro);
+
+        respuesta.setSize(880, 470);
+        respuesta.setVisible(true);
+
+        Container padre = this.getParent();
+
+        padre.removeAll();
+        padre.add(respuesta);
+        padre.revalidate();
+        padre.repaint();
+    }//GEN-LAST:event_atrasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Siguiente;
+    private javax.swing.JButton atras;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel pregunta1;
@@ -231,6 +403,8 @@ public class totalpreguntas1 extends javax.swing.JPanel {
     private javax.swing.JScrollPane respuesta3;
     private javax.swing.JScrollPane respuesta4;
     private javax.swing.JScrollPane respuesta5;
+    private javax.swing.JButton siguiente;
+    private javax.swing.JButton terminarRevision;
     private javax.swing.JTextArea textArea1;
     private javax.swing.JTextArea textArea2;
     private javax.swing.JTextArea textArea3;

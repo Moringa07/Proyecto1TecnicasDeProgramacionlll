@@ -7,18 +7,23 @@ package vistas;
 
 import java.awt.Color;
 import java.awt.Container;
+import javax.swing.JOptionPane;
+import modelos.Participante;
 
 /**
  *
  * @author claud
  */
 public class VentanaPrincipal extends javax.swing.JPanel {
+    private PrincipalView cronometro;
     
     /**
      * Creates new form ventanaPrincipal
+     * @param cronometro
      */
-    public VentanaPrincipal() {
+    public VentanaPrincipal(PrincipalView cronometro) {
         initComponents();
+        this.cronometro = cronometro;
     }
 
     /**
@@ -32,11 +37,11 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         IniciarSesion = new javax.swing.JLabel();
-        NombreUsuario1 = new javax.swing.JTextField();
+        nombreUsuario = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         Nombre = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        IngresarCedula = new javax.swing.JTextField();
+        ingresarCedula = new javax.swing.JTextField();
         Cedula = new javax.swing.JLabel();
         PanelLogo = new javax.swing.JPanel();
         Logo = new javax.swing.JLabel();
@@ -54,22 +59,22 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         IniciarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(IniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 210, 40));
 
-        NombreUsuario1.setBackground(new java.awt.Color(228, 251, 251));
-        NombreUsuario1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        NombreUsuario1.setForeground(new java.awt.Color(204, 204, 204));
-        NombreUsuario1.setText("Ingrese su nombre completo");
-        NombreUsuario1.setBorder(null);
-        NombreUsuario1.addMouseListener(new java.awt.event.MouseAdapter() {
+        nombreUsuario.setBackground(new java.awt.Color(228, 251, 251));
+        nombreUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        nombreUsuario.setForeground(new java.awt.Color(204, 204, 204));
+        nombreUsuario.setText("Ingrese su nombre completo");
+        nombreUsuario.setBorder(null);
+        nombreUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                NombreUsuario1MousePressed(evt);
+                nombreUsuarioMousePressed(evt);
             }
         });
-        NombreUsuario1.addActionListener(new java.awt.event.ActionListener() {
+        nombreUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NombreUsuario1ActionPerformed(evt);
+                nombreUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(NombreUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 470, 30));
+        jPanel1.add(nombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 470, 30));
 
         jSeparator2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 440, 20));
@@ -82,22 +87,22 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         jSeparator1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 440, 10));
 
-        IngresarCedula.setBackground(new java.awt.Color(228, 251, 251));
-        IngresarCedula.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        IngresarCedula.setForeground(new java.awt.Color(204, 204, 204));
-        IngresarCedula.setText("Ingrese su cédula (V-)");
-        IngresarCedula.setBorder(null);
-        IngresarCedula.addMouseListener(new java.awt.event.MouseAdapter() {
+        ingresarCedula.setBackground(new java.awt.Color(228, 251, 251));
+        ingresarCedula.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        ingresarCedula.setForeground(new java.awt.Color(204, 204, 204));
+        ingresarCedula.setText("Ingrese su cédula (V-)");
+        ingresarCedula.setBorder(null);
+        ingresarCedula.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                IngresarCedulaMousePressed(evt);
+                ingresarCedulaMousePressed(evt);
             }
         });
-        IngresarCedula.addActionListener(new java.awt.event.ActionListener() {
+        ingresarCedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IngresarCedulaActionPerformed(evt);
+                ingresarCedulaActionPerformed(evt);
             }
         });
-        jPanel1.add(IngresarCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 470, 30));
+        jPanel1.add(ingresarCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 470, 30));
 
         Cedula.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         Cedula.setText("IDENTIFICACIÓN");
@@ -139,40 +144,55 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NombreUsuario1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NombreUsuario1MousePressed
-        if (NombreUsuario1.getText().equals("Ingrese su nombre completo")){
-            NombreUsuario1.setText("");
-            NombreUsuario1.setForeground(Color.BLACK);
+    private void nombreUsuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombreUsuarioMousePressed
+        if (nombreUsuario.getText().equals("Ingrese su nombre completo")){
+            nombreUsuario.setText("");
+            nombreUsuario.setForeground(Color.BLACK);
         }
-        if (String.valueOf(IngresarCedula.getText()).isEmpty()){
-            IngresarCedula.setText("Ingrese su cédula (V-)");
-            IngresarCedula.setForeground(Color.GRAY);
+        if (String.valueOf(ingresarCedula.getText()).isEmpty()){
+            ingresarCedula.setText("Ingrese su cédula (V-)");
+            ingresarCedula.setForeground(Color.GRAY);
         }
-    }//GEN-LAST:event_NombreUsuario1MousePressed
+    }//GEN-LAST:event_nombreUsuarioMousePressed
 
-    private void NombreUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreUsuario1ActionPerformed
+    private void nombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NombreUsuario1ActionPerformed
+    }//GEN-LAST:event_nombreUsuarioActionPerformed
 
-    private void IngresarCedulaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarCedulaMousePressed
-        if(IngresarCedula.getText().equals("Ingrese su cédula (V-)")){
-            IngresarCedula.setText("");
-            IngresarCedula.setForeground(Color.BLACK);
+    private void ingresarCedulaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarCedulaMousePressed
+        if(ingresarCedula.getText().equals("Ingrese su cédula (V-)")){
+            ingresarCedula.setText("");
+            ingresarCedula.setForeground(Color.BLACK);
         }
 
-        if (String.valueOf(NombreUsuario1.getText()).isEmpty()){
-            NombreUsuario1.setText("Ingrese su nombre completo");
-            NombreUsuario1.setForeground(Color.GRAY);
+        if (String.valueOf(nombreUsuario.getText()).isEmpty()){
+            nombreUsuario.setText("Ingrese su nombre completo");
+            nombreUsuario.setForeground(Color.GRAY);
         }
 
-    }//GEN-LAST:event_IngresarCedulaMousePressed
+    }//GEN-LAST:event_ingresarCedulaMousePressed
 
-    private void IngresarCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarCedulaActionPerformed
+    private void ingresarCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarCedulaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_IngresarCedulaActionPerformed
+    }//GEN-LAST:event_ingresarCedulaActionPerformed
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
-        SeleccionarLenguaje lenguaje = new SeleccionarLenguaje();
+        if(ingresarCedula.getText().equals("Ingrese su cédula (V-)") || String.valueOf(nombreUsuario.getText()).isEmpty()){
+            ShowAlert alerta = new ShowAlert("Error", "Ingrese su cedula", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        if(nombreUsuario.getText().equals("Ingrese su nombre completo") || String.valueOf(ingresarCedula.getText()).isEmpty()){
+            ShowAlert alerta = new ShowAlert("Error", "Ingrese su nombre", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        String cedula = ingresarCedula.getText();
+        String nombre = nombreUsuario.getText();
+        
+        Participante participante = new Participante(nombre, cedula);
+        
+        SeleccionarLenguaje lenguaje = new SeleccionarLenguaje(participante, this.cronometro);
         lenguaje.setSize(880, 470);
         
         Container padre = this.getParent();
@@ -181,21 +201,24 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         padre.add(lenguaje);
         padre.revalidate();
         padre.repaint();
+        
+        cronometro.setContainer(padre);
+        cronometro.setParticipante(participante);
     }//GEN-LAST:event_aceptarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Cedula;
-    private javax.swing.JTextField IngresarCedula;
     private javax.swing.JLabel IniciarSesion;
     private javax.swing.JLabel Logo;
     private javax.swing.JLabel Nombre;
-    private javax.swing.JTextField NombreUsuario1;
     private javax.swing.JPanel PanelLogo;
     private javax.swing.JButton aceptar;
+    private javax.swing.JTextField ingresarCedula;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField nombreUsuario;
     private javax.swing.JLabel titulo1;
     private javax.swing.JLabel titulo2;
     // End of variables declaration//GEN-END:variables

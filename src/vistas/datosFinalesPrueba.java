@@ -5,17 +5,48 @@
  */
 package vistas;
 
+import java.awt.Container;
+import modelos.Participante;
+import modelos.Question;
+
 /**
  *
  * @author claud
  */
 public class datosFinalesPrueba extends javax.swing.JPanel {
-
+    private Participante participante;
+    private PrincipalView cronometro;
+    
     /**
      * Creates new form datosFinalesPrueba
+     * @param preguntas
+     * @param participante
      */
-    public datosFinalesPrueba() {
+    public datosFinalesPrueba(Question[] preguntas, Participante participante, PrincipalView cronometro) {
         initComponents();
+        int correctas = 0;
+        int incorrectas = 0;
+      
+        this.cronometro = cronometro;
+        
+        for (Question pregunta : preguntas) {
+            boolean res = Respuestas.comprobarRespuesta(pregunta);
+            if(res){
+                correctas++;
+            } else {
+                incorrectas++;
+            }
+        }
+        
+        numeroCorrectas.setText(numeroCorrectas.getText() + String.valueOf(correctas));
+        numeroIncorrectas.setText(numeroIncorrectas.getText() + String.valueOf(incorrectas));
+        
+        nombre.setText(participante.getNombre());
+        cedula.setText(participante.getCedula());
+        
+        double puntos = (100 * correctas) / 25;
+        
+        puntaje.setText(String.valueOf(puntos));
     }
 
     /**
@@ -28,28 +59,37 @@ public class datosFinalesPrueba extends javax.swing.JPanel {
     private void initComponents() {
 
         FondoAzulDerecho = new javax.swing.JPanel();
-        TituloDatosPrueba = new javax.swing.JLabel();
-        jSeparator5 = new javax.swing.JSeparator();
-        tituloRespondidasBien = new javax.swing.JLabel();
-        respondidasBien = new javax.swing.JTextField();
-        tituloRespondidasMal = new javax.swing.JLabel();
-        respondidasMal = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        lenguajeExamen = new javax.swing.JLabel();
+        jpanelCorrectas = new javax.swing.JPanel();
+        numeroCorrectas = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        numeroIncorrectas = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
         tituloResultadoFinal = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
         jSeparator6 = new javax.swing.JSeparator();
-        totalPuntos = new javax.swing.JTextField();
+        jPanel12 = new javax.swing.JPanel();
         puntos = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        puntaje = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
         Siguiente = new javax.swing.JButton();
         datosEstudianteTitulo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         nombreApellidoTitulo = new javax.swing.JLabel();
-        nombreApellido = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         identificacionTitulo = new javax.swing.JLabel();
-        identificacion = new javax.swing.JTextField();
+        cedula = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        imagen = new javax.swing.JLabel();
         dichoProgramacion = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        imagen = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(228, 251, 251));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -57,164 +97,311 @@ public class datosFinalesPrueba extends javax.swing.JPanel {
         FondoAzulDerecho.setBackground(new java.awt.Color(15, 192, 255));
         FondoAzulDerecho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TituloDatosPrueba.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        TituloDatosPrueba.setForeground(new java.awt.Color(0, 0, 0));
-        TituloDatosPrueba.setText("Datos de la prueba");
-        FondoAzulDerecho.add(TituloDatosPrueba, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
-        FondoAzulDerecho.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 190, 10));
+        jPanel2.setBackground(new java.awt.Color(15, 192, 255));
+        jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.Y_AXIS));
 
-        tituloRespondidasBien.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        tituloRespondidasBien.setForeground(new java.awt.Color(0, 0, 0));
-        tituloRespondidasBien.setText("- Número de preguntas respondidas correctamente:");
-        FondoAzulDerecho.add(tituloRespondidasBien, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel4.setBackground(new java.awt.Color(15, 192, 255));
+        jPanel4.setLayout(new java.awt.BorderLayout());
 
-        respondidasBien.setEditable(false);
-        respondidasBien.setBackground(new java.awt.Color(15, 192, 255));
-        respondidasBien.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        respondidasBien.setForeground(new java.awt.Color(0, 0, 0));
-        respondidasBien.setText("jTextField2");
-        respondidasBien.setBorder(null);
-        FondoAzulDerecho.add(respondidasBien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
+        jPanel7.setBackground(new java.awt.Color(15, 192, 255));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tituloRespondidasMal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        tituloRespondidasMal.setForeground(new java.awt.Color(0, 0, 0));
-        tituloRespondidasMal.setText("- Número de preguntas respondidas incorrectamente:");
-        FondoAzulDerecho.add(tituloRespondidasMal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setText("Examen ");
+        jPanel7.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
 
-        respondidasMal.setEditable(false);
-        respondidasMal.setBackground(new java.awt.Color(15, 192, 255));
-        respondidasMal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        respondidasMal.setForeground(new java.awt.Color(0, 0, 0));
-        respondidasMal.setText("jTextField4");
-        respondidasMal.setBorder(null);
-        FondoAzulDerecho.add(respondidasMal, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, -1, -1));
+        jPanel4.add(jPanel7, java.awt.BorderLayout.CENTER);
+
+        jPanel6.setBackground(new java.awt.Color(15, 192, 255));
+
+        lenguajeExamen.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lenguajeExamen.setText("Respuestas Examen C");
+        jPanel6.add(lenguajeExamen);
+
+        jPanel4.add(jPanel6, java.awt.BorderLayout.PAGE_END);
+
+        jPanel2.add(jPanel4);
+
+        jpanelCorrectas.setBackground(new java.awt.Color(15, 192, 255));
+
+        numeroCorrectas.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        numeroCorrectas.setText("- Respondidas correctamente: ");
+
+        javax.swing.GroupLayout jpanelCorrectasLayout = new javax.swing.GroupLayout(jpanelCorrectas);
+        jpanelCorrectas.setLayout(jpanelCorrectasLayout);
+        jpanelCorrectasLayout.setHorizontalGroup(
+            jpanelCorrectasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelCorrectasLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(numeroCorrectas)
+                .addContainerGap(104, Short.MAX_VALUE))
+        );
+        jpanelCorrectasLayout.setVerticalGroup(
+            jpanelCorrectasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpanelCorrectasLayout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addComponent(numeroCorrectas)
+                .addGap(20, 20, 20))
+        );
+
+        jPanel2.add(jpanelCorrectas);
+
+        jPanel5.setBackground(new java.awt.Color(15, 192, 255));
+
+        numeroIncorrectas.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        numeroIncorrectas.setText("- Respondidas incorrectamente: ");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(numeroIncorrectas)
+                .addContainerGap(87, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(numeroIncorrectas)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(jPanel5);
+
+        FondoAzulDerecho.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 250));
+
+        jPanel8.setBackground(new java.awt.Color(15, 192, 255));
+        jPanel8.setLayout(new javax.swing.BoxLayout(jPanel8, javax.swing.BoxLayout.Y_AXIS));
+
+        jPanel9.setBackground(new java.awt.Color(15, 192, 255));
 
         tituloResultadoFinal.setBackground(new java.awt.Color(15, 192, 255));
         tituloResultadoFinal.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        tituloResultadoFinal.setForeground(new java.awt.Color(0, 0, 0));
         tituloResultadoFinal.setText("Resultado final");
-        FondoAzulDerecho.add(tituloResultadoFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, -1));
-        FondoAzulDerecho.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 220, 10));
 
-        totalPuntos.setEditable(false);
-        totalPuntos.setBackground(new java.awt.Color(15, 192, 255));
-        totalPuntos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        totalPuntos.setForeground(new java.awt.Color(0, 0, 0));
-        totalPuntos.setText("jTextField2");
-        totalPuntos.setBorder(null);
-        FondoAzulDerecho.add(totalPuntos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, -1, -1));
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tituloResultadoFinal)
+                .addContainerGap())
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(tituloResultadoFinal)
+                .addGap(5, 5, 5))
+        );
 
-        puntos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        puntos.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel8.add(jPanel9);
+
+        jPanel13.setBackground(new java.awt.Color(15, 192, 255));
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(2, 2, 2)
+                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10))
+        );
+
+        jPanel8.add(jPanel13);
+
+        jPanel12.setBackground(new java.awt.Color(15, 192, 255));
+
+        puntos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         puntos.setText("Puntos");
-        FondoAzulDerecho.add(puntos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, -1));
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(puntos)
+                .addContainerGap())
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(puntos)
+                .addContainerGap())
+        );
+
+        jPanel8.add(jPanel12);
+
+        jPanel10.setBackground(new java.awt.Color(15, 192, 255));
+
+        puntaje.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        puntaje.setText("jLabel1");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(puntaje)
+                .addContainerGap())
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(puntaje)
+                .addContainerGap())
+        );
+
+        jPanel8.add(jPanel10);
+
+        jPanel11.setBackground(new java.awt.Color(15, 192, 255));
 
         Siguiente.setBackground(new java.awt.Color(255, 204, 0));
-        Siguiente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Siguiente.setForeground(new java.awt.Color(0, 0, 0));
-        Siguiente.setText("Siguiente");
+        Siguiente.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        Siguiente.setText("Volver al Principio");
         Siguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        FondoAzulDerecho.add(Siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 130, 50));
+        Siguiente.setMargin(new java.awt.Insets(2, 15, 2, 15));
+        Siguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SiguienteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Siguiente)
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
+        jPanel8.add(jPanel11);
+
+        FondoAzulDerecho.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 400, 210));
 
         add(FondoAzulDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 410, 520));
 
         datosEstudianteTitulo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        datosEstudianteTitulo.setForeground(new java.awt.Color(0, 0, 0));
         datosEstudianteTitulo.setText("Datos del estudiante");
         add(datosEstudianteTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, 20));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 230, 20));
 
         nombreApellidoTitulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        nombreApellidoTitulo.setForeground(new java.awt.Color(0, 0, 0));
         nombreApellidoTitulo.setText("Nombre y apellido:");
         add(nombreApellidoTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
-        nombreApellido.setEditable(false);
-        nombreApellido.setBackground(new java.awt.Color(228, 251, 251));
-        nombreApellido.setForeground(new java.awt.Color(0, 0, 0));
-        nombreApellido.setBorder(null);
-        nombreApellido.addActionListener(new java.awt.event.ActionListener() {
+        nombre.setEditable(false);
+        nombre.setBackground(new java.awt.Color(228, 251, 251));
+        nombre.setBorder(null);
+        nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreApellidoActionPerformed(evt);
+                nombreActionPerformed(evt);
             }
         });
-        add(nombreApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 400, 30));
+        add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 400, 30));
         add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 410, 10));
 
         identificacionTitulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        identificacionTitulo.setForeground(new java.awt.Color(0, 0, 0));
-        identificacionTitulo.setText("Identificación:");
+        identificacionTitulo.setText("Cedula:");
         add(identificacionTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
-        identificacion.setEditable(false);
-        identificacion.setBackground(new java.awt.Color(228, 251, 251));
-        identificacion.setForeground(new java.awt.Color(0, 0, 0));
-        identificacion.setBorder(null);
-        identificacion.addActionListener(new java.awt.event.ActionListener() {
+        cedula.setEditable(false);
+        cedula.setBackground(new java.awt.Color(228, 251, 251));
+        cedula.setBorder(null);
+        cedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                identificacionActionPerformed(evt);
+                cedulaActionPerformed(evt);
             }
         });
-        add(identificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 400, 30));
+        add(cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 400, 30));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 410, 10));
-
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/programacionImagen.png"))); // NOI18N
-        add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 130, 140));
 
         dichoProgramacion.setBackground(new java.awt.Color(228, 251, 251));
         dichoProgramacion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        dichoProgramacion.setForeground(new java.awt.Color(0, 0, 0));
-        dichoProgramacion.setText("\"Si puedes imaginarlo, puedes programarlo\"");
-        add(dichoProgramacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 310, -1));
+        dichoProgramacion.setText("Si puedes imaginarlo, puedes programarlo");
+        add(dichoProgramacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, -1, -1));
 
-        jPanel1.setBackground(new java.awt.Color(228, 251, 251));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 890, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 520, Short.MAX_VALUE)
-        );
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 520));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/programacionImagen.png"))); // NOI18N
+        add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nombreApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreApellidoActionPerformed
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nombreApellidoActionPerformed
+    }//GEN-LAST:event_nombreActionPerformed
 
-    private void identificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identificacionActionPerformed
+    private void cedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedulaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_identificacionActionPerformed
+    }//GEN-LAST:event_cedulaActionPerformed
+
+    private void SiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SiguienteActionPerformed
+        SeleccionarLenguaje lenguaje = new SeleccionarLenguaje(this.participante, this.cronometro);
+        lenguaje.setSize(880, 470);
+        
+        Container padre = this.getParent();
+        
+        padre.removeAll();
+        padre.add(lenguaje);
+        padre.revalidate();
+        padre.repaint();
+    }//GEN-LAST:event_SiguienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FondoAzulDerecho;
     private javax.swing.JButton Siguiente;
-    private javax.swing.JLabel TituloDatosPrueba;
+    private javax.swing.JTextField cedula;
     private javax.swing.JLabel datosEstudianteTitulo;
     private javax.swing.JLabel dichoProgramacion;
-    private javax.swing.JTextField identificacion;
     private javax.swing.JLabel identificacionTitulo;
     private javax.swing.JLabel imagen;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JTextField nombreApellido;
+    private javax.swing.JPanel jpanelCorrectas;
+    private javax.swing.JLabel lenguajeExamen;
+    private javax.swing.JTextField nombre;
     private javax.swing.JLabel nombreApellidoTitulo;
+    private javax.swing.JLabel numeroCorrectas;
+    private javax.swing.JLabel numeroIncorrectas;
+    private javax.swing.JLabel puntaje;
     private javax.swing.JLabel puntos;
-    private javax.swing.JTextField respondidasBien;
-    private javax.swing.JTextField respondidasMal;
-    private javax.swing.JLabel tituloRespondidasBien;
-    private javax.swing.JLabel tituloRespondidasMal;
     private javax.swing.JLabel tituloResultadoFinal;
-    private javax.swing.JTextField totalPuntos;
     // End of variables declaration//GEN-END:variables
 }

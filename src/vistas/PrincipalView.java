@@ -1,20 +1,85 @@
-
 package vistas;
 
 import java.awt.Color;
+import java.awt.Container;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import static java.util.concurrent.TimeUnit.SECONDS;
+import javax.swing.JOptionPane;
+import modelos.Participante;
+import modelos.Question;
 
 public class PrincipalView extends javax.swing.JFrame {
 
+    private ScheduledExecutorService ejecucionCronometro;
+    private Participante participante;
+    private Question[] preguntas;
+    private Container container;
+
+    public void comenzarCronometro() {
+        final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
+        final Runnable runnable = new Runnable() {
+            int tiempoPrueba = 30;
+
+            public void run() {
+                tiempoPrueba--;
+
+                int currentMinute = tiempoPrueba / 60;
+                int currentSecond = tiempoPrueba - (currentMinute * 60);
+
+                temporizador.setText(String.valueOf(currentMinute) + ":" + String.valueOf(currentSecond));
+
+                if (tiempoPrueba < 0) {
+                    terminarCronometro();
+                }
+            }
+        };
+        scheduler.scheduleAtFixedRate(runnable, 0, 1, SECONDS);
+    }
+
+    public void terminarCronometro() {
+        ShowAlert alerta = new ShowAlert("Tiempo Acabado", "Se te acabo el tiempo, pasaron 45 minutos, se mostraran tus resultados",
+                JOptionPane.INFORMATION_MESSAGE);
+
+        Respuestas resultados = new Respuestas(this.preguntas, 0, this.participante, this);
+        resultados.setSize(880, 470);
+        resultados.setVisible(true);
+
+        Container padre = this.container;
+
+        padre.removeAll();
+        padre.add(resultados);
+        padre.revalidate();
+        padre.repaint();
+
+        ejecucionCronometro.shutdown();
+    }
+
+    public void setParticipante(Participante participante) {
+        this.participante = participante;
+    }
+
+    public void setPreguntas(Question[] preguntas) {
+        this.preguntas = preguntas;
+    }
+
+    public void setContainer(Container container) {
+        this.container = container;
+    }
+    
+    
+
     int xMouse, yMouse;
+
     public PrincipalView() {
         initComponents();
         setLocationRelativeTo(null);
-        
-        VentanaPrincipal login = new VentanaPrincipal();
+
+        VentanaPrincipal login = new VentanaPrincipal(this);
         login.setSize(880, 470);
         content.add(login);
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -25,6 +90,7 @@ public class PrincipalView extends javax.swing.JFrame {
         PanelSalir = new javax.swing.JPanel();
         XSalir = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
+        temporizador = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -37,6 +103,9 @@ public class PrincipalView extends javax.swing.JFrame {
 
         Header.setBackground(new java.awt.Color(228, 251, 251));
         Header.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HeaderMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 HeaderMousePressed(evt);
             }
@@ -45,6 +114,11 @@ public class PrincipalView extends javax.swing.JFrame {
         PanelSalir.setBackground(new java.awt.Color(228, 251, 251));
         PanelSalir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         PanelSalir.setForeground(new java.awt.Color(255, 255, 255));
+        PanelSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PanelSalirMouseClicked(evt);
+            }
+        });
 
         XSalir.setBackground(new java.awt.Color(60,63,65));
         XSalir.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -104,18 +178,30 @@ public class PrincipalView extends javax.swing.JFrame {
             .addGap(0, 468, Short.MAX_VALUE)
         );
 
+        temporizador.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        temporizador.setText("00:00");
+
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(temporizador)
+                .addGap(25, 25, 25))
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(temporizador)))
                 .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -136,6 +222,8 @@ public class PrincipalView extends javax.swing.JFrame {
     private void HeaderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeaderMousePressed
         xMouse = evt.getX();
         yMouse = evt.getY();
+        System.exit(0);
+        System.out.println("Header");
     }//GEN-LAST:event_HeaderMousePressed
 
     private void XSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_XSalirMouseClicked
@@ -151,7 +239,14 @@ public class PrincipalView extends javax.swing.JFrame {
         PanelSalir.setBackground(Color.white);
     }//GEN-LAST:event_XSalirMouseExited
 
- 
+    private void HeaderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HeaderMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_HeaderMouseClicked
+
+    private void PanelSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSalirMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_PanelSalirMouseClicked
+
     public static void main(String args[]) {
 
         try {
@@ -186,5 +281,6 @@ public class PrincipalView extends javax.swing.JFrame {
     private javax.swing.JLabel XSalir;
     private javax.swing.JPanel background;
     private javax.swing.JPanel content;
+    private javax.swing.JLabel temporizador;
     // End of variables declaration//GEN-END:variables
 }

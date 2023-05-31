@@ -1,17 +1,37 @@
-
 package vistas;
 
 import java.awt.Container;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import modelos.Participante;
+import modelos.Preguntas;
+import modelos.Question;
 
 public class SeleccionarLenguaje extends javax.swing.JPanel {
-    public SeleccionarLenguaje() {
-        initComponents();
-    }
+    private Participante participante;
+    private PrincipalView cronometro;
     
+    public SeleccionarLenguaje(Participante participante, PrincipalView cronometro) {
+        initComponents();
+
+        this.participante = participante;
+        this.cronometro = cronometro;
+        
+        radioButtonGroup.add(opcionJava);
+        radioButtonGroup.add(opcionC);
+        radioButtonGroup.add(opcioncmas);
+        radioButtonGroup.add(opcionPython);
+        radioButtonGroup.add(opcioncishar);
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        radioButtonGroup = new javax.swing.ButtonGroup();
         panelVentana2 = new javax.swing.JPanel();
         barraColorTitulo = new javax.swing.JPanel();
         tituloTipoDePrueba = new javax.swing.JLabel();
@@ -25,7 +45,7 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
         Aceptar = new javax.swing.JButton();
         Regresar = new javax.swing.JButton();
         opcioncmas = new javax.swing.JRadioButton();
-        opcionPhyton = new javax.swing.JRadioButton();
+        opcionPython = new javax.swing.JRadioButton();
         opcionJava = new javax.swing.JRadioButton();
         opcionC = new javax.swing.JRadioButton();
         opcioncishar = new javax.swing.JRadioButton();
@@ -87,6 +107,11 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
         Aceptar.setText("Aceptar");
         Aceptar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Aceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AceptarActionPerformed(evt);
+            }
+        });
 
         Regresar.setBackground(new java.awt.Color(15, 192, 255));
         Regresar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -108,11 +133,11 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
             }
         });
 
-        opcionPhyton.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        opcionPhyton.setText(" Python");
-        opcionPhyton.addActionListener(new java.awt.event.ActionListener() {
+        opcionPython.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        opcionPython.setText(" Python");
+        opcionPython.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                opcionPhytonActionPerformed(evt);
+                opcionPythonActionPerformed(evt);
             }
         });
 
@@ -158,7 +183,7 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
                 .addGap(60, 60, 60)
                 .addComponent(python)
                 .addGap(26, 26, 26)
-                .addComponent(opcionPhyton)
+                .addComponent(opcionPython)
                 .addGap(25, 25, 25)
                 .addComponent(cishar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
@@ -197,7 +222,7 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
                         .addComponent(python))
                     .addGroup(panelVentana2Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(opcionPhyton))
+                        .addComponent(opcionPython))
                     .addGroup(panelVentana2Layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(cishar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -231,12 +256,12 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_opcioncmasActionPerformed
 
-    private void opcionPhytonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionPhytonActionPerformed
+    private void opcionPythonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionPythonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_opcionPhytonActionPerformed
+    }//GEN-LAST:event_opcionPythonActionPerformed
 
     private void opcionJavaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionJavaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_opcionJavaActionPerformed
 
     private void opcionCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionCActionPerformed
@@ -248,17 +273,57 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
     }//GEN-LAST:event_opcioncisharActionPerformed
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        VentanaPrincipal login = new VentanaPrincipal();
+        VentanaPrincipal login = new VentanaPrincipal(this.cronometro);
         login.setSize(880, 470);
         login.setVisible(true);
-        
+
         Container padre = this.getParent();
-        
+
         padre.removeAll();
         padre.add(login);
         padre.repaint();
         padre.revalidate();
     }//GEN-LAST:event_RegresarActionPerformed
+
+    private void AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarActionPerformed
+        Preguntas preguntas = null;
+        if (opcioncmas.isSelected()) { // C++
+            ShowAlert alerta = new ShowAlert("Lenguaje seleccionado", "C++", JOptionPane.WARNING_MESSAGE);
+        } else if (opcionC.isSelected()) { // C
+            String path = new File(".").getAbsolutePath();
+            path = path.substring(0, path.length() - 2);
+            preguntas = new Preguntas(path + "\\src\\Preguntas\\preguntasC.json");
+        } else if (opcionJava.isSelected()) { // Java
+            ShowAlert alerta = new ShowAlert("Lenguaje seleccionado", "Java", JOptionPane.WARNING_MESSAGE);
+        } else if (opcioncishar.isSelected()) { // C#
+            ShowAlert alerta = new ShowAlert("Lenguaje seleccionado", "C#", JOptionPane.WARNING_MESSAGE);
+        } else if (opcionPython.isSelected()) { // Python
+            ShowAlert alerta = new ShowAlert("Lenguaje seleccionado", "Python", JOptionPane.WARNING_MESSAGE);
+        } else { // Error
+            ShowAlert alerta = new ShowAlert("Error", "No se ha seleccionado ningun lenguaje para la prueba :c", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        Question[] listaDePreguntas = null;
+        try {
+            listaDePreguntas = preguntas.obtenerPreguntas();
+        } catch (IOException ex) {
+            Logger.getLogger(SeleccionarLenguaje.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Question[] preguntasPrueba = preguntas.pruebaAleatoria(listaDePreguntas, 25);
+        this.cronometro.setPreguntas(preguntasPrueba);
+        
+        InstruccionesPrueba instruc = new InstruccionesPrueba(preguntasPrueba, this.participante, this.cronometro);
+        instruc.setSize(880, 470);
+        
+        Container padre = this.getParent();
+
+        padre.removeAll();
+        padre.add(instruc);
+        padre.repaint();
+        padre.revalidate();
+    }//GEN-LAST:event_AceptarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -273,11 +338,12 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
     private javax.swing.JLabel logo3;
     private javax.swing.JRadioButton opcionC;
     private javax.swing.JRadioButton opcionJava;
-    private javax.swing.JRadioButton opcionPhyton;
+    private javax.swing.JRadioButton opcionPython;
     private javax.swing.JRadioButton opcioncishar;
     private javax.swing.JRadioButton opcioncmas;
     private javax.swing.JPanel panelVentana2;
     private javax.swing.JLabel python;
+    private javax.swing.ButtonGroup radioButtonGroup;
     private javax.swing.JLabel tituloTipoDePrueba;
     // End of variables declaration//GEN-END:variables
 }
