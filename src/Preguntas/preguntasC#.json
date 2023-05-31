@@ -1,0 +1,301 @@
+[{
+    "pregunta": "C# es un lenguaje de programación orientado a objetos.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# es un lenguaje de programación interpretado.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# se ejecuta en la plataforma .NET.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# es un lenguaje de programación compilado.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# es un lenguaje de programación multiplataforma.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# es un lenguaje de programación de tipado dinámico.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# es un lenguaje de programación desarrollado por Microsoft",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# es un lenguaje de programación creado en la década de 1990.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# es un lenguaje de programación utilizado principalmente para aplicaciones de escritorio.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "C# es un lenguaje de programación que permite la programación asincrónica.",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Un Objeto en C#:",
+    "posiblesRespuestas": ["Una entidad con características similares a otro objeto", "Una entidad con características diferentes a otro objeto", "Una entidad con características propias"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué secuencia de escape utilizaremos para un salto de línea?",
+    "posiblesRespuestas": ["\\n", "\\'", "\\\\", "\\b"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Si se desea declarar una variable para almacenar un número entero y que, inicialmente, contenga el valor 35, se debe escribir:",
+    "posiblesRespuestas": ["int numero 35;", " numero=35;", "int numero=35;"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "El operador % hace referencia a:",
+    "posiblesRespuestas": ["El resto de una división de dos divisiones", "La división de dos números", "Multiplicación de dos números"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Es un dato cuyo valor no puede cambiar durante la ejecución del programa",
+    "posiblesRespuestas": ["int", "String", "constante"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál de estas variables está bien definidas?",
+    "posiblesRespuestas": ["int numero_de_hijos;", "int #_de_hijosl", "int numero-de-hijos", "Ninguna de las anteriores"],
+    "respuestasCorrectas": [3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "int, char, float, string y boolean son:",
+    "posiblesRespuestas": ["Función de acceso a datos", "Instrucciones de acceso a datos", "Tipos de datos"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Por lo general utiliza 1 byte de memoria, valores: true o false.",
+    "posiblesRespuestas": ["int", "char", "bool"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "La siguiente expresion x <= y representa a que operando",
+    "posiblesRespuestas": ["Mayor o igual que", "Menor o igual que", "Mayor que"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Se utiliza para representar número con partes fraccionarias",
+    "posiblesRespuestas": ["int", "float", "String"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos tipos de datos numéricos enteros en C#?",
+    "posiblesRespuestas": ["float", "uint", "int"],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos formas de declarar una variable en C#?",
+    "posiblesRespuestas": ["string variable;", "var varible=10;", " int varible=10;"],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos formas de inicializar una lista en C#?",
+    "posiblesRespuestas": ["List<int> miLista = new List<int>();", "List<int> miLista = {1, 2, 3};", "int[] miLista = {1, 2, 3};"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos estructuras de control condicional en C#?",
+    "posiblesRespuestas": ["if/else", "while/for", "switch/case"],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos formas de inicializar un arreglo en C#?",
+    "posiblesRespuestas": ["int[] miArreglo = new int[3];", "int[] miArreglo = {1, 2, 3};", "int miArreglo[3] = {1, 2, 3};"],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos palabras clave utilizadas en C# para la gestión de memoria dinámica?",
+    "posiblesRespuestas": ["new", "delete", "malloc"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos operadores lógicos en C#?",
+    "posiblesRespuestas": ["&&", "||", "!"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos formas de pasar argumentos a una función en C#?",
+    "posiblesRespuestas": ["Por valor", "Por referencia", "Por puntero"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos formas de declarar una variable como constante en C#?",
+    "posiblesRespuestas": ["const int miVariable;", "const float miVariable;", "c) int const miVariable;"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Cuáles son dos tipos de excepciones en C#?",
+    "posiblesRespuestas": ["ArgumentNullException", "IndexOutOfRangeException", "FileNotFoundException"],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles de las siguientes opciones es la forma correcta de definir un arreglo en C#?",
+    "posiblesRespuestas": ["int[] numeros = {1, 2, 3};", "int numeros[] = {1, 2, 3};", "int[] valores2 = new int[50];", "float[] numeros = {1, 2, 3};"],
+    "respuestasCorrectas": [0,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres tipos de datos de punto flotante en C#?",
+    "posiblesRespuestas": ["int", "float", "decimal", "double"],
+    "respuestasCorrectas": [1,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres formas de declarar una variable en C#?",
+    "posiblesRespuestas": ["string variable;", "bool nuevo= false;", "int variable = 10;", "var texto= 'texto';"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres tipos de colecciones en C#?",
+    "posiblesRespuestas": ["List", "Dictionary", "Queue", "Pilas "],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres tipos de estructuras de control en C#?",
+    "posiblesRespuestas": ["Secuenciales.", "Colectiva", "Selectivas.", "Iterativas."],
+    "respuestasCorrectas": [0,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Como se compone una clase en C#?",
+    "posiblesRespuestas": ["Atributos y modificadores de la clase", "Nombre de la clase", "Interfaces implementadas por la clase", "Librerias .h"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres operadores aritméticos en C#?",
+    "posiblesRespuestas": ["+", "*", "||", "-"],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres operadores de comparación en C#?",
+    "posiblesRespuestas": ["==", "!=", "<=", "&&"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres formas de declarar una variable como constante en C#?",
+    "posiblesRespuestas": ["cont long miVariable", "const int miVariable;", "const short miVariable;", "int cosnt miVariable;"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son los modificadores de acceso en C#?",
+    "posiblesRespuestas": ["public", "final", "private", "protected"],
+    "respuestasCorrectas": [0,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n //Sumer dos números \n public int SumarNumeros(int numero1, int numero2){ \n    int resultado = \n     return resultado; \n }",
+    "posiblesRespuestas": ["numero1 + numero2;"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Recorre un arreglo de enteros, suma todos sus elementos y muestra el resultado en la consola. \n int[] numeros = new int[] {1, 2, 3, 4, 5}; \n int suma = 0; \n for(= 0; i < numeros.Length; i++){ \n     suma += numeros[i]; \n } \n Console.WriteLine('La suma de todos los números es: ' + suma);",
+    "posiblesRespuestas": ["int i"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // El código muestra en la consola 'y es mayor que x'. \n int x = 5; \n int y = 10; \n if (x > y){     Console.WriteLine('x es mayor que y'); \n } else if (y > x){ \n     ('y es mayor que x'); \n } else{  \n    Console.WriteLine('x e y son iguales'); \n}",
+    "posiblesRespuestas": ["Console.WriteLine"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // declara una lista de cadenas, agrega tres elementos a la lista y muestra la cantidad de elementos que tiene la lista en la consola. \n List<string> nombres = new List<string>(); \n nombres.Add('Juan'); \n nombres.Add('María'); \n nombres.Add('Pedro'); \n Console.WriteLine('La lista tiene ' +  + ' elementos.');",
+    "posiblesRespuestas": ["nombres.Count"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // una clase ‘Persona’ con dos propiedades (Nombre y Edad) y un constructor que inicializa dichas propiedades. \n public class Persona{ \n    public string Nombre { get; set; } \n \n     public int Edad { get; set; } \n \n    public Persona(int edad)  {\n    this.Nombre = nombre; \n         this.Edad = edad;\n  } \n}",
+    "posiblesRespuestas": ["string nombre"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // mostrar en la consola los números del 10 al 1, y luego muestra '¡Despegue!'. \n  while (x > 0){ \n     Console.WriteLine(x); \n    x--; \n } \n Console.WriteLine('¡Despegue!'); \n ",
+    "posiblesRespuestas": ["int x = 10;"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. \n // El código muestra en la consola 'El número es impar'. \n int numero = 5; \n if (){ \n     Console.WriteLine('El número es par'); \n }else{ \n     Console.WriteLine('El número es impar'); \n }",
+    "posiblesRespuestas": ["numero % 2 == 0"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. \n // El código muestra en la consola 'Hola Juan'. \n string nombre = 'Juan'; \n if (nombre == 'Juan'){ \n     Console.WriteLine(''); \n }else{ \n    Console.WriteLine('Hola desconocido'); \n}",
+    "posiblesRespuestas": ["Hola Juan"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. \n// El código muestra en la consola el resultado de la multiplicación de x e y, que es 50. \n int x = 5; \n int y = 10; \n int z = x * y; \n Console.WriteLine(); ",
+    "posiblesRespuestas": ["z"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. \n // El código intenta ejecutar un bloque de código que puede lanzar una excepción y, en caso de que esto suceda, muestra un mensaje de error en la consola. \n try{  \n   // Código que puede lanzar una excepción \n } catch (Exception ex){ \n     Console.WriteLine('Se ha producido un error: ' + ex.Message) \n}",
+    "posiblesRespuestas": [";"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+}]

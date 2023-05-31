@@ -1,0 +1,301 @@
+[{
+    "pregunta": "¿C++ es un lenguaje de programación de alto nivel?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+}, {
+    "pregunta": "¿En C++, los identificadores pueden comenzar con un número?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿C++ es un lenguaje de programación compilado?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿El operador de incremento en C++ se representa con dos signos menos '--'?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿En C++, la función 'cin' se utiliza para la entrada de datos desde el teclado?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿En C++, la estructura de control 'switch' se utiliza para tomar decisiones basadas en una serie de opciones?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿En C++, la función 'strlen' se utiliza para obtener la longitud de una cadena de caracteres?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿El operador de asignación en C++ se representa con un solo signo igual '='?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿En C++, la función 'cout' se utiliza para la salida de datos en la pantalla?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿En C++, las variables de tipo 'float' pueden almacenar números enteros y decimales?",
+    "posiblesRespuestas": ["Verdadero", "Falso"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Qué declaración de variable es correcta para una variable entera llamada 'edad' en C++?",
+    "posiblesRespuestas": ["float edad", "int edad", "char edad"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la palabra clave utilizada en C++ para declarar una función?",
+    "posiblesRespuestas": ["function", "def", "void"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es el operador utilizado en C++ para comparar dos valores?",
+    "posiblesRespuestas": ["==", "!=", ">"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la sintaxis correcta para un bucle 'for' en C++?",
+    "posiblesRespuestas": ["for (condición; actualización; inicialización)", "for (condición; actualización; inicialización)", "for (inicialización; condición; actualización)"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la sintaxis correcta para una declaración de arreglo en C++?",
+    "posiblesRespuestas": ["int arreglo[3] = {1, 2, 3};", "int arreglo = {1, 2, 3};", "int arreglo(1, 2, 3);"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la sintaxis correcta para una declaración de estructura en C++?",
+    "posiblesRespuestas": ["struc MiEstructura {};", "structure MiEstructura {};", "struct MiEstructura ()"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la palabra clave utilizada en C++ para heredar de una clase base?",
+    "posiblesRespuestas": ["extends", "inherits", "public"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la sintaxis correcta para llamar a una función en C++?",
+    "posiblesRespuestas": ["funcion(argumentos)nombre;", "funcion.nombre_de_la_funcion(argumentos);", "nombre_de_la_funcion(argumentos);"],
+    "respuestasCorrectas": [2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la palabra clave utilizada en C++ para pasar argumentos por referencia?",
+    "posiblesRespuestas": ["&", "*", "$"],
+    "respuestasCorrectas": [0],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuál es la sintaxis correcta para declarar un apuntador en C++?",
+    "posiblesRespuestas": ["int mi_apuntador;", "int *mi_apuntador;", "nt &mi_apuntador;"],
+    "respuestasCorrectas": [1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos tipos de datos numéricos enteros en C++?",
+    "posiblesRespuestas": ["float", "double", "int"],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos formas de declarar una variable en C++?",
+    "posiblesRespuestas": ["int variable;", "variable=10;", "int variable=10;"],
+    "respuestasCorrectas": [0,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos operadores de comparación en C++?",
+    "posiblesRespuestas": ["==", "!=", "*"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos estructuras de control de flujo en C++?",
+    "posiblesRespuestas": ["if/else", "while/for", "switch/case"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos formas de inicializar un arreglo en C++?",
+    "posiblesRespuestas": ["int mi_arreglo[] = {1, 2, 3};", "int mi_arreglo[3] = {1, 2, 3};", "int *mi_arreglo = new int[3]{1, 2, 3};"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos palabras clave utilizadas en C++ para la gestión de memoria dinámica?",
+    "posiblesRespuestas": ["new", "delete", "malloc"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos operadores lógicos en C++?",
+    "posiblesRespuestas": ["&&", "||", "!"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos formas de pasar argumentos a una función en C++?",
+    "posiblesRespuestas": ["por valor", "por referencia", "por puntero"],
+    "respuestasCorrectas": [0,1],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son dos tipos de punteros en C++?",
+    "posiblesRespuestas": ["punteros nulos", "punteros de funcion", "punteros de clase"],
+    "respuestasCorrectas": [1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿a++ es un tipo de operador?",
+    "posiblesRespuestas": ["Operador de incremento", "Logico", "Asignacion", "Agrega uno de su operando"],
+    "respuestasCorrectas": [0,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres tipos de bucles en C++?",
+    "posiblesRespuestas": ["for", "while", "switch", "do-while"],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres tipos de datos numéricos en C++?",
+    "posiblesRespuestas": ["int", "float", "double", "char","long"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres operadores de comparación en C++?",
+    "posiblesRespuestas": ["==", "!=", ">", "||","&&"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres tipos de estructuras de datos en C++?",
+    "posiblesRespuestas": ["arreglo", "cadena", "lista", "conjunto","arbol"],
+    "respuestasCorrectas": [0,2,4],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres formas de inicializar un arreglo en C++?",
+    "posiblesRespuestas": ["int mi_arreglo[] = {1, 2, 3};", "int mi_arreglo[3] = {1, 2, 3};", "int *mi_arreglo = new int[3]{1, 2, 3};", "int mi_arreglo[3];"],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres palabras clave utilizadas en C++ para la gestión de memoria dinámica?",
+    "posiblesRespuestas": ["new", "delete", "malloc", "free"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres formas de acceder a un miembro de una estructura en C++?",
+    "posiblesRespuestas": ["estructura.miembro", "estructura->miembro", "(*estructura).miembro", "estructura::miembro"],
+    "respuestasCorrectas": [0,1,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres operadores lógicos en C++?",
+    "posiblesRespuestas": ["&&", "||", "!", "xor"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres formas de pasar argumentos a una función en C++?",
+    "posiblesRespuestas": ["por valor", "por referencia", "por puntero", "por constante"],
+    "respuestasCorrectas": [0,1,2],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "¿Cuáles son tres formas de declarar una variable como constante en C++?",
+    "posiblesRespuestas": ["int const *mi_variable;", "const int mi_variable;", "int const mi_variable;", "const int *mi_variable;",""],
+    "respuestasCorrectas": [1,2,3],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código /n // programa en C++ que lea dos números enteros y calcule su suma. /n #include <iostream> \n using namespace std; \n int main() { \n  int num1, num2; \n  cout << 'Ingrese dos números enteros: '; \n   cin; \n   int suma = num1 + num2; \n   cout << 'La suma de ' << num1 << ' y ' << num2 << ' es ' << suma; \n   return 0;}",
+    "posiblesRespuestas": [">> num1 >> num2"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique su respuesta, ¿cuánto vale prom?: \n int main() { \n  float venta[ ] = {10, 5, 12, 1, 20}; \n float prom; \n prom = venta[1] + venta[2] + venta[4] / 3;}",
+    "posiblesRespuestas": ["12.3"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n //un programa en C++ que lea un número entero y determine si es par o impar.\n #include <iostream> \n using namespace std; \n int main() {   cout << 'Ingrese un número entero: '; \n   cin >> num; \n   if (num % 2 == 0) { \n     cout << num << 'es par.'; \n  } else {    cout << num << ' es impar.';  } \n  return 0;}",
+    "posiblesRespuestas": ["int num;"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n // programa en C++ que calcule el área de un círculo. \n #include <iostream> \n using namespace std; \n int main() { double radio; \n   const double PI = 3.14159; \n   cout << 'Ingrese el radio del círculo: '; \n   cin >> radio; \n  double area = PI * radio * radio; \n   cout << 'El área del círculo es ' << ; \n   return 0;}",
+    "posiblesRespuestas": ["area"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n // programa en C++ que lea un número entero y determine si es positivo, negativo o cero. \n #include <iostream> \n using namespace std; \n int main() { \n   int num; \n   cout << 'Ingrese un número entero: '; \n   cin >> num; \n   if (num > 0) {     cout << num << ' es positivo.'; \n   } else if () { \n     cout << num << 'es negativo.'; \n   } else {     cout << 'El número es cero.'; \n   } \n  return 0;}",
+    "posiblesRespuestas": ["num<0"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // programa en C++ que lea un número entero y determine si es un número perfecto o no. \n #include <iostream> \n using namespace std; \n int main() { \n   int num; \n   int suma_divisores = 0; \n   cout << 'Ingrese un número entero: '; \n   cin >> num; \n   for (int i = 1; i <= num / 2; i++) { \n     if (num % i == 0) { \n       suma_divisores += i;     } \n  }   if (suma_divisores == num) { \n     cout << num << ' es un número perfecto.'; \n   } else {     cout << num << 'no es un número perfecto.';    } \n }",
+    "posiblesRespuestas": ["return 0"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta":"Del siguiente programa identifique que falta para que funcione el código \n// programa en C++ que saque el promedio de 3 notas finales \n #include<iostream> \n using namespace std; \n int main(){ \n float n1, n2, n3, notaP, notaT,notaPAr; \n cout<<’\nBienvenido, te ayudare a sacar el promedio de 3 notas...’<<endl;cout<<'\nIngrese el primer numero: '; cin>>n1; \n cout<<'\nIngrese el segundo numero: '; \n cin>>n2;   \n cout<<'\nIngrese el tercer numero: '; cin>>n3; n notaP= n1*0.30; \n    notaT= n2*0.60; \n notaPAr= n3*0.10; \n result = notaP + notaT + notaPAr; \n cout<< ‘\nLa nota final del alumno es: ‘<< result<< endl; \n return 0;}",
+    "posiblesRespuestas": ["result"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // programa en C++ que saque el mayor de 2 numeros \n #include <iostream> \n using namespace std; \n int main (){ \n int a, b; \n cout<<’ Ingrese un numero: ‘; \n cin>> a;  \n cout<<'Ingrese un numero: '; \n if (a>=b){  \n cout<<'El numero mayor es: '<<a; \n }else { \n cout'El numero mayor es: '<<b; \n } \n return 0; } ",
+    "posiblesRespuestas": ["cin>>b"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // programa en C++ que saque el precio del producto al aplicar el IVA  \n #include <iostream> \n using namespace std; \n int main ()() { \n float precio, iva, precioIva; \n cout<<'Ingrese el precio del producto: '; \n cin>>precio; \n iva=precio*0.21; \n    =precio + iva; \n cout<<'El prevcio del producto al aplicarle el IVA es: '<<precioIva<<endl; \n return 0;}" ,
+    "posiblesRespuestas": ["precioIva"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+},{
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n //programa para saber si la letra ingresada es una vocal \n   \n #include <iostream> \n using namespace std; \n  int main (){ \n char letra; \n cout<<'\nIngrese una letra: '; \n cin>>; \n if((letra=='a') || (letra=='e')|| (letra=='i') || (letra=='o') || (letra=='u') || (letra=='A')|| (letra=='E') || (letra=='I') || (letra=='O') || (letra=='U')) { \n cout<<'La letra ingresada es una vocal'}else if(letra != 1) {\n cout<<'No se puede procesar el dato. Intente de nuevo ' } ; \n return 0; } ",
+    "posiblesRespuestas": ["letra"],
+    "respuestasCorrectas": [],
+     "respuestasDelUsuario": [],
+     "respuestaTextoUsuario": ""
+}]
