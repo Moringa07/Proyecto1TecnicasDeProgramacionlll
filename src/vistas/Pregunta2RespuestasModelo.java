@@ -22,7 +22,7 @@ public class Pregunta2RespuestasModelo extends javax.swing.JPanel {
         this.participante = participante;
         this.cronometro = cronometro;
 
-        pregunta3.setText("<html>" + preguntaActual.getPregunta() + "</html>");
+        pregunta3.setText("<html>Pregunta N#" + (posicion + 1) + " " + preguntaActual.getPregunta() + "</html>");
 
         if (preguntaActual.getRespuestasDelUsuario().length > 0) {
             javax.swing.JRadioButton[] select = {seleccion16, seleccion17, seleccion18, seleccion19, seleccion20};
@@ -776,7 +776,7 @@ public class Pregunta2RespuestasModelo extends javax.swing.JPanel {
             padre.repaint();
         } else {
             ShowAlert alerta = new ShowAlert("Error, tipo de pregunta no valida", "Tipo de pregunta no valida", JOptionPane.ERROR_MESSAGE);
-            System.out.println(nuevaPregunta);
+            System.out.println(nuevaPregunta.getPregunta());
         }
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
@@ -844,6 +844,7 @@ public class Pregunta2RespuestasModelo extends javax.swing.JPanel {
         int respuesta = alerta.getRespuesta();
         
         if(respuesta == 0){
+            this.cronometro.terminarCronometro();
             Respuestas resultados = new Respuestas(this.preguntas, 0, this.participante, this.cronometro);
             resultados.setSize(880, 470);
             resultados.setVisible(true);

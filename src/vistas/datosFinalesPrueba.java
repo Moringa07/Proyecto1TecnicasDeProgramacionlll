@@ -40,6 +40,7 @@ public class datosFinalesPrueba extends javax.swing.JPanel {
         
         numeroCorrectas.setText(numeroCorrectas.getText() + String.valueOf(correctas));
         numeroIncorrectas.setText(numeroIncorrectas.getText() + String.valueOf(incorrectas));
+        lenguajeExamen.setText(lenguajeExamen.getText() + this.cronometro.getTipoDePrueba());
         
         nombre.setText(participante.getNombre());
         cedula.setText(participante.getCedula());
@@ -115,7 +116,7 @@ public class datosFinalesPrueba extends javax.swing.JPanel {
         jPanel6.setBackground(new java.awt.Color(15, 192, 255));
 
         lenguajeExamen.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lenguajeExamen.setText("Respuestas Examen C");
+        lenguajeExamen.setText("Respuestas Examen ");
         jPanel6.add(lenguajeExamen);
 
         jPanel4.add(jPanel6, java.awt.BorderLayout.PAGE_END);

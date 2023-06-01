@@ -233,19 +233,19 @@
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n for elemento in mi_lista: \n   print()",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| for elemento in mi_lista: |\n|   print()",
     "posiblesRespuestas": ["elemento"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n //leer un archivo \n with open('mi_archivo.txt', 'r') as archivo: \n     contenido = archivo.read() \n    print()",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| //leer un archivo |\n| with open('mi_archivo.txt', 'r') as archivo: |\n|     contenido = archivo.read() |\n|    print()",
     "posiblesRespuestas": ["contenido"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n/ / Escribe un código en Python que tome una lista de números y devuelva la suma de todos los números pares en la lista. def suma_pares(lista): \n    suma = 0 \n     for numero in lista: \n         if:            suma += numero \n return suma \n # Ejemplo de uso \n mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9] \n print(suma_pares(mi_lista))",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n|/ / Escribe un código en Python que tome una lista de números y devuelva la suma de todos los números pares en la lista. def suma_pares(lista): |\n|    suma = 0 |\n|     for numero in lista: |\n|         if:            suma += numero |\n| return suma |\n| # Ejemplo de uso |\n| mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9] |\n| print(suma_pares(mi_lista))",
     "posiblesRespuestas": ["numero % 2 == 0"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
@@ -263,31 +263,31 @@
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escribe un código en Python que tome una lista de palabras y devuelva la longitud de la palabra más larga en la lista. \n def longitud_palabra_mas_larga(lista_palabras): \n longitud_maxima = 0 \n   for palabra in lista_palabras: \n       if len(palabra) > longitud_maxima: \n    longitud_maxima = len(palabra) \n     return \n # Ejemplo de uso mi_lista = ['hola', 'mundo', 'programacion', 'python']\nprint(longitud_palabra_mas_larga(mi_lista))",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escribe un código en Python que tome una lista de palabras y devuelva la longitud de la palabra más larga en la lista. |\n| def longitud_palabra_mas_larga(lista_palabras): |\n| longitud_maxima = 0 |\n|   for palabra in lista_palabras: |\n|       if len(palabra) > longitud_maxima: |\n|    longitud_maxima = len(palabra) |\n|     return |\n| # Ejemplo de uso mi_lista = ['hola', 'mundo', 'programacion', 'python'] |\n| print(longitud_palabra_mas_larga(mi_lista))",
     "posiblesRespuestas": ["longitud_maxima"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n \\Escribe un código en Python que tome una lista de números y devuelva una lista que contenga solo los números que sean mayores que un valor específico. \n def numeros_mayores_que_valor(lista_numeros, valor):    numeros_mayores = []  \n     for numero in lista_numeros:  \n         if > valor:  \n       numeros_mayores.append(numero)  \n    return numeros_mayores. \n # Ejemplo de uso \n mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9] \n mi_valor = 4 \n print(numeros_mayores_que_valor(mi_lista, mi_valor))",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| //Escribe un código en Python que tome una lista de números y devuelva una lista que contenga solo los números que sean mayores que un valor específico. |\n| def numeros_mayores_que_valor(lista_numeros, valor):    numeros_mayores = []  |\n|     for numero in lista_numeros:  |\n|         if > valor:  |\n|       numeros_mayores.append(numero)  |\n|    return numeros_mayores. |\n| # Ejemplo de uso |\n| mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9] |\n| mi_valor = 4 |\n| print(numeros_mayores_que_valor(mi_lista, mi_valor))",
     "posiblesRespuestas": ["numero"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n \\ Escribe un código en Python que tome dos listas de números y devuelva una lista que contenga solo los números que sean comunes entre ambas listas. \n def numeros_pares(lista_numeros): \n   pares = [] \n    for numero in lista_numeros: \n         if numero % 2 == 0:  \n   pares.append(numero)  \n     return pares \n  # Ejemplo de uso \n  mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]  \n print(numeros_pares())",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escribe un código en Python que tome dos listas de números y devuelva una lista que contenga solo los números que sean comunes entre ambas listas. |\n| def numeros_pares(lista_numeros): |\n|   pares = [] |\n|    for numero in lista_numeros: |\n|         if numero % 2 == 0:  |\n|   pares.append(numero)  |\n|     return pares |\n|  # Ejemplo de uso |\n|  mi_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]  |\n| print(numeros_pares())",
     "posiblesRespuestas": ["mi_lista"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escribe un código en Python que tome dos listas de números y devuelva una lista que contenga solo los números que sean comunes entre ambas listas. \n def numeros_comunes(): \n     comunes = [] \n for numero in lista1: \n         if numero in lista2: \n             comunes.append(numero) \n     return comunes \n # Ejemplo de uso  \n mi_lista1 = [1, 2, 3, 4, 5]  \n mi_lista2 = [3, 4, 5, 6, 7] \n print(numeros_comunes(mi_lista1, mi_lista2))",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escribe un código en Python que tome dos listas de números y devuelva una lista que contenga solo los números que sean comunes entre ambas listas. |\n| def numeros_comunes(): |\n|     comunes = [] |\n| for numero in lista1: |\n|         if numero in lista2: |\n|             comunes.append(numero) |\n|     return comunes |\n| # Ejemplo de uso  |\n| mi_lista1 = [1, 2, 3, 4, 5]  |\n| mi_lista2 = [3, 4, 5, 6, 7] |\n| print(numeros_comunes(mi_lista1, mi_lista2))",
     "posiblesRespuestas": ["lista1, lista2"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n //Escribe una función en Python que tome una lista de números y devuelva una lista que contenga solo los números que sean primos. \n def numeros_primos(lista_numeros): \n    primos = [] \n   for numero in lista_numeros: \n      if numero > 1: \n  es_primo = True \n for i in range(2, int(numero/2)+1): \n  if (numero % i) == 0: \n es_primo = False \n   break \n if es_primo: \n primos.append(numero) \n     return ",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| //Escribe una función en Python que tome una lista de números y devuelva una lista que contenga solo los números que sean primos. |\n| def numeros_primos(lista_numeros): |\n|    primos = [] |\n|   for numero in lista_numeros: |\n|      if numero > 1: |\n|  es_primo = True |\n| for i in range(2, int(numero/2)+1): |\n|  if (numero % i) == 0: |\n| es_primo = False |\n|   break |\n| if es_primo: |\n| primos.append(numero) |\n|     return ",
     "posiblesRespuestas": ["primos"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],

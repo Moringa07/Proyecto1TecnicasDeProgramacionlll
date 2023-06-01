@@ -97,7 +97,7 @@
 },{
     "pregunta": "int, char, float, string y boolean son:",
     "posiblesRespuestas": ["Función de acceso a datos", "Instrucciones de acceso a datos", "Tipos de datos"],
-    "respuestasCorrectas": [],
+    "respuestasCorrectas": [3],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
@@ -239,61 +239,61 @@
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n //Sumer dos números \n public int SumarNumeros(int numero1, int numero2){ \n    int resultado = \n     return resultado; \n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| //Sumer dos números |\n| public int SumarNumeros(int numero1, int numero2){ |\n|    int resultado = |\n|     return resultado; |\n| }",
     "posiblesRespuestas": ["numero1 + numero2;"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Recorre un arreglo de enteros, suma todos sus elementos y muestra el resultado en la consola. \n int[] numeros = new int[] {1, 2, 3, 4, 5}; \n int suma = 0; \n for(= 0; i < numeros.Length; i++){ \n     suma += numeros[i]; \n } \n Console.WriteLine('La suma de todos los números es: ' + suma);",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Recorre un arreglo de enteros, suma todos sus elementos y muestra el resultado en la consola. |\n| int[] numeros = new int[] {1, 2, 3, 4, 5}; |\n| int suma = 0; |\n| for(= 0; i < numeros.Length; i++){ |\n|     suma += numeros[i]; |\n| } |\n| Console.WriteLine('La suma de todos los números es: ' + suma);",
     "posiblesRespuestas": ["int i"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // El código muestra en la consola 'y es mayor que x'. \n int x = 5; \n int y = 10; \n if (x > y){     Console.WriteLine('x es mayor que y'); \n } else if (y > x){ \n     ('y es mayor que x'); \n } else{  \n    Console.WriteLine('x e y son iguales'); \n}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // El código muestra en la consola 'y es mayor que x'. |\n| int x = 5; |\n| int y = 10; |\n| if (x > y){     Console.WriteLine('x es mayor que y'); |\n| } else if (y > x){ |\n|     ('y es mayor que x'); |\n| } else{  |\n|    Console.WriteLine('x e y son iguales'); |\n|}",
     "posiblesRespuestas": ["Console.WriteLine"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // declara una lista de cadenas, agrega tres elementos a la lista y muestra la cantidad de elementos que tiene la lista en la consola. \n List<string> nombres = new List<string>(); \n nombres.Add('Juan'); \n nombres.Add('María'); \n nombres.Add('Pedro'); \n Console.WriteLine('La lista tiene ' +  + ' elementos.');",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // declara una lista de cadenas, agrega tres elementos a la lista y muestra la cantidad de elementos que tiene la lista en la consola. |\n| List<string> nombres = new List<string>(); |\n| nombres.Add('Juan'); |\n| nombres.Add('María'); |\n| nombres.Add('Pedro'); |\n| Console.WriteLine('La lista tiene ' +  + ' elementos.');",
     "posiblesRespuestas": ["nombres.Count"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // una clase ‘Persona’ con dos propiedades (Nombre y Edad) y un constructor que inicializa dichas propiedades. \n public class Persona{ \n    public string Nombre { get; set; } \n \n     public int Edad { get; set; } \n \n    public Persona(int edad)  {\n    this.Nombre = nombre; \n         this.Edad = edad;\n  } \n}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // una clase ‘Persona’ con dos propiedades (Nombre y Edad) y un constructor que inicializa dichas propiedades. |\n| public class Persona{ |\n|    public string Nombre { get; set; } |\n| |\n|     public int Edad { get; set; } |\n| |\n|    public Persona(int edad)  {|\n|    this.Nombre = nombre; |\n|         this.Edad = edad;|\n|  } |\n|}",
     "posiblesRespuestas": ["string nombre"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // mostrar en la consola los números del 10 al 1, y luego muestra '¡Despegue!'. \n  while (x > 0){ \n     Console.WriteLine(x); \n    x--; \n } \n Console.WriteLine('¡Despegue!'); \n ",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // mostrar en la consola los números del 10 al 1, y luego muestra '¡Despegue!'. |\n|  while (x > 0){ |\n|     Console.WriteLine(x); |\n|    x--; |\n| } |\n| Console.WriteLine('¡Despegue!'); |\n| ",
     "posiblesRespuestas": ["int x = 10;"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. \n // El código muestra en la consola 'El número es impar'. \n int numero = 5; \n if (){ \n     Console.WriteLine('El número es par'); \n }else{ \n     Console.WriteLine('El número es impar'); \n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. |\n| // El código muestra en la consola 'El número es impar'. |\n| int numero = 5; |\n| if (){ |\n|     Console.WriteLine('El número es par'); |\n| }else{ |\n|     Console.WriteLine('El número es impar'); |\n| }",
     "posiblesRespuestas": ["numero % 2 == 0"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. \n // El código muestra en la consola 'Hola Juan'. \n string nombre = 'Juan'; \n if (nombre == 'Juan'){ \n     Console.WriteLine(''); \n }else{ \n    Console.WriteLine('Hola desconocido'); \n}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. |\n| // El código muestra en la consola 'Hola Juan'. |\n| string nombre = 'Juan'; |\n| if (nombre == 'Juan'){ |\n|     Console.WriteLine(''); |\n| }else{ |\n|    Console.WriteLine('Hola desconocido'); |\n|}",
     "posiblesRespuestas": ["Hola Juan"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. \n// El código muestra en la consola el resultado de la multiplicación de x e y, que es 50. \n int x = 5; \n int y = 10; \n int z = x * y; \n Console.WriteLine(); ",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. |\n|// El código muestra en la consola el resultado de la multiplicación de x e y, que es 50. |\n| int x = 5; |\n| int y = 10; |\n| int z = x * y; |\n| Console.WriteLine(); ",
     "posiblesRespuestas": ["z"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. \n // El código intenta ejecutar un bloque de código que puede lanzar una excepción y, en caso de que esto suceda, muestra un mensaje de error en la consola. \n try{  \n   // Código que puede lanzar una excepción \n } catch (Exception ex){ \n     Console.WriteLine('Se ha producido un error: ' + ex.Message) \n}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código. |\n| // El código intenta ejecutar un bloque de código que puede lanzar una excepción y, en caso de que esto suceda, muestra un mensaje de error en la consola. |\n| try{  |\n|   // Código que puede lanzar una excepción |\n| } catch (Exception ex){ |\n|     Console.WriteLine('Se ha producido un error: ' + ex.Message) |\n|}",
     "posiblesRespuestas": [";"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],

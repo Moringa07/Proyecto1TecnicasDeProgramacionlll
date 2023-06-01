@@ -15,12 +15,13 @@ public class PrincipalView extends javax.swing.JFrame {
     private Participante participante;
     private Question[] preguntas;
     private Container container;
+    private String tipoDePrueba;
 
     public void comenzarCronometro() {
         final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
         final Runnable runnable = new Runnable() {
-            int tiempoPrueba = 30;
+            int tiempoPrueba = 60 * 45;
 
             public void run() {
                 tiempoPrueba--;
@@ -28,17 +29,36 @@ public class PrincipalView extends javax.swing.JFrame {
                 int currentMinute = tiempoPrueba / 60;
                 int currentSecond = tiempoPrueba - (currentMinute * 60);
 
-                temporizador.setText(String.valueOf(currentMinute) + ":" + String.valueOf(currentSecond));
+                String currentMinuteString = (currentMinute < 10) ? ("0" + String.valueOf(currentMinute)) : String.valueOf(currentMinute);
+                String currentSecondString = (currentSecond < 10) ? ("0" + String.valueOf(currentSecond)) : String.valueOf(currentSecond);
 
-                if (tiempoPrueba < 0) {
-                    terminarCronometro();
+                temporizador.setText(currentMinuteString + ":" + currentSecondString);
+
+                if (tiempoPrueba <= 0) {
+                    terminarCronometroTiempo();
                 }
             }
         };
+        ejecucionCronometro = scheduler;
         scheduler.scheduleAtFixedRate(runnable, 0, 1, SECONDS);
     }
 
     public void terminarCronometro() {
+        Respuestas resultados = new Respuestas(this.preguntas, 0, this.participante, this);
+        resultados.setSize(880, 470);
+        resultados.setVisible(true);
+
+        Container padre = this.container;
+
+        padre.removeAll();
+        padre.add(resultados);
+        padre.revalidate();
+        padre.repaint();
+        temporizador.setText("00:00");
+        ejecucionCronometro.shutdown();
+    }
+    
+    public void terminarCronometroTiempo() {
         ShowAlert alerta = new ShowAlert("Tiempo Acabado", "Se te acabo el tiempo, pasaron 45 minutos, se mostraran tus resultados",
                 JOptionPane.INFORMATION_MESSAGE);
 
@@ -52,7 +72,7 @@ public class PrincipalView extends javax.swing.JFrame {
         padre.add(resultados);
         padre.revalidate();
         padre.repaint();
-
+        temporizador.setText("00:00");
         ejecucionCronometro.shutdown();
     }
 
@@ -67,8 +87,14 @@ public class PrincipalView extends javax.swing.JFrame {
     public void setContainer(Container container) {
         this.container = container;
     }
-    
-    
+
+    public void setTipoDePrueba(String tipo) {
+        this.tipoDePrueba = tipo;
+    }
+
+    public String getTipoDePrueba() {
+        return this.tipoDePrueba;
+    }
 
     int xMouse, yMouse;
 

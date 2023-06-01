@@ -239,61 +239,61 @@
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que imprima 'Hola, mundo' en la consola. \n public class HolaMundo { \n     public static void main(String[] args) { \n   ('Hola, mundo');\n  }\n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escriba un programa que imprima 'Hola, mundo' en la consola. |\n| public class HolaMundo { |\n|     public static void main(String[] args) { |\n|   ('Hola, mundo');|\n|  }|\n| }",
     "posiblesRespuestas": ["System.out.println"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que calcule la suma de dos números enteros y muestre el resultado en la consola. \n public class Suma { \n public static void main(String[] args) { \n = 5; \n  int num2 = 7; \n       int suma = num1 + num2; \n  System.out.println('La suma de ' + num1 + ' y ' + num2 + ' es ' + suma); \n  } \n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escriba un programa que calcule la suma de dos números enteros y muestre el resultado en la consola. |\n| public class Suma { |\n| public static void main(String[] args) { |\n| = 5; |\n|  int num2 = 7; |\n|       int suma = num1 + num2; |\n|  System.out.println('La suma de ' + num1 + ' y ' + num2 + ' es ' + suma); |\n|  } |\n| }",
     "posiblesRespuestas": ["int num1"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea un número entero desde la consola y muestre si es par o impar. \n import java.util.Scanner;  \n public class ParImpar { \n  public static void main(String[] args) { \n canner scanner = new Scanner(System.in); \n   System.out.print('Ingrese un número entero: '); \n int num = scanner.nextInt(); \n  if () { \n System.out.println(num + 'es par'); \n } else { \n System.out.println(num + ' es impar'); \n  }  } }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escriba un programa que lea un número entero desde la consola y muestre si es par o impar. |\n| import java.util.Scanner;  |\n| public class ParImpar { |\n|  public static void main(String[] args) { |\n| canner scanner = new Scanner(System.in); |\n|   System.out.print('Ingrese un número entero: '); |\n| int num = scanner.nextInt(); |\n|  if () { |\n| System.out.println(num + 'es par'); |\n| } else { |\n| System.out.println(num + ' es impar'); |\n|  }  } }",
     "posiblesRespuestas": ["num % 2 == 0"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea un número entero desde la consola y muestre su tabla de multiplicar del 1 al 10. \n public class TablaMultiplicar { \n public static void main(String[] args) { \n Scanner scanner = new Scanner(System.in); \n System.out.print('Ingrese un número entero: '); \n int num = scanner.nextInt(); \n for (= 1; i <= 10; i++) { \n System.out.println(num + ' x ' + i + ' = ' + (num * i)); \n } \n }\n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escriba un programa que lea un número entero desde la consola y muestre su tabla de multiplicar del 1 al 10. |\n| public class TablaMultiplicar { |\n| public static void main(String[] args) { |\n| Scanner scanner = new Scanner(System.in); |\n| System.out.print('Ingrese un número entero: '); |\n| int num = scanner.nextInt(); |\n| for (= 1; i <= 10; i++) { |\n| System.out.println(num + ' x ' + i + ' = ' + (num * i)); |\n| } |\n| }|\n| }",
     "posiblesRespuestas": ["int i"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea dos números enteros desde la consola y muestre el mayor de ellos. \n import java.util.Scanner; \n public class Mayor {  \n public static void main(String[] args) {  \n Scanner scanner = new Scanner(System.in); \n System.out.print('Ingrese el primer número entero: ');  \n int num1 = scanner.nextInt(); \n System.out.print('Ingrese el segundo número entero: ');  \n int num2 = scanner.nextInt(); \n if () {  \n System.out.println(num1 + ' es mayor que ' + num2); \n } else if (num1 < num2) {  \n System.out.println(num2 + ' es mayor que ' + num1); \n } else {  \n System.out.println(num1 + ' y ' +num2 + 'son iguales'); \n  } \n } \n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escriba un programa que lea dos números enteros desde la consola y muestre el mayor de ellos. |\n| import java.util.Scanner; |\n| public class Mayor {  |\n| public static void main(String[] args) {  |\n| Scanner scanner = new Scanner(System.in); |\n| System.out.print('Ingrese el primer número entero: ');  |\n| int num1 = scanner.nextInt(); |\n| System.out.print('Ingrese el segundo número entero: ');  |\n| int num2 = scanner.nextInt(); |\n| if () {  |\n| System.out.println(num1 + ' es mayor que ' + num2); |\n| } else if (num1 < num2) {  |\n| System.out.println(num2 + ' es mayor que ' + num1); |\n| } else {  |\n| System.out.println(num1 + ' y ' +num2 + 'son iguales'); |\n|  } |\n| } |\n| }",
     "posiblesRespuestas": ["num1 > num2"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n \\ Escriba un programa que calcule la media aritmética de tres números enteros y muestre el resultado en la consola. \n import java.util.Scanner; \n public class MediaAritmetica { \n public static void main(String[] args) { \n Scanner scanner = new Scanner(System.in); \n System.out.print('Ingrese el primer número entero:'); \n   int num1 = scanner.nextInt(); \n System.out.print('Ingrese el segundo número entero: '); \n int num2 = scanner.nextInt(); \n System.out.print('Ingrese el tercer número entero: '); \n int num3 = scanner.nextInt(); \n double media = () / 3.0; \n System.out.println('La media aritmética de ' + num1 + ', ' + num2 + ' y ' + num3 + 'es ' + media); \n } \n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| \\ Escriba un programa que calcule la media aritmética de tres números enteros y muestre el resultado en la consola. |\n| import java.util.Scanner; |\n| public class MediaAritmetica { |\n| public static void main(String[] args) { |\n| Scanner scanner = new Scanner(System.in); |\n| System.out.print('Ingrese el primer número entero:'); |\n|   int num1 = scanner.nextInt(); |\n| System.out.print('Ingrese el segundo número entero: '); |\n| int num2 = scanner.nextInt(); |\n| System.out.print('Ingrese el tercer número entero: '); |\n| int num3 = scanner.nextInt(); |\n| double media = () / 3.0; |\n| System.out.println('La media aritmética de ' + num1 + ', ' + num2 + ' y ' + num3 + 'es ' + media); |\n| } |\n| }",
     "posiblesRespuestas": ["num1 + num2 + num3"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea un número entero positivo desde la consola y muestre su factorial. \n import java.util.Scanner; \n public class Factorial { \n public static void main(String[] args) { \n Scanner scanner = new Scanner(); \n System.out.print('Ingrese un número entero positivo: '); \n int num = scanner.nextInt(); \n  int factorial = 1; \n  for (int i = 1; i <=num; i++) { \n factorial *= i; \n } \n System.out.println('El factorial de ' + num + 'es ' + factorial); \n } \n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escriba un programa que lea un número entero positivo desde la consola y muestre su factorial. |\n| import java.util.Scanner; |\n| public class Factorial { |\n| public static void main(String[] args) { |\n| Scanner scanner = new Scanner(); |\n| System.out.print('Ingrese un número entero positivo: '); |\n| int num = scanner.nextInt(); |\n|  int factorial = 1; |\n|  for (int i = 1; i <=num; i++) { |\n| factorial *= i; |\n| } |\n| System.out.println('El factorial de ' + num + 'es ' + factorial); |\n| } |\n| }",
     "posiblesRespuestas": ["System.in"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea una cadena de texto desde la consola y muestre su longitud. \n import java.util.Scanner; public class LongitudCadena { \n public static void main(String[] args) { \n Scanner scanner = Scanner(System.in); \n System.out.print('Ingrese una cadena de texto: '); \n String cadena = scanner.nextLine(); \n  int longitud = cadena.length();\n System.out.println('La longitud de la cadena ' + cadena + ' es' + longitud); \n } \n}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escriba un programa que lea una cadena de texto desde la consola y muestre su longitud. |\n| import java.util.Scanner; public class LongitudCadena { |\n| public static void main(String[] args) { |\n| Scanner scanner = Scanner(System.in); |\n| System.out.print('Ingrese una cadena de texto: '); |\n| String cadena = scanner.nextLine(); |\n|  int longitud = cadena.length();|\n| System.out.println('La longitud de la cadena ' + cadena + ' es' + longitud); |\n| } |\n|}",
     "posiblesRespuestas": ["new"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // Escriba un programa que lea una cadena de texto desde la consola y muestre su reverso. \n import java.util.Scanner; \n public class ReversoCadena { \n public static void main(String[] args) { \nScanner scanner = new Scanner(System.in); \n System.out.print('Ingrese una cadena de texto: '); \n String cadena = scanner. \n String reverso = ''; \n for (int i = cadena.length() - 1; i >= 0; i--) { \n reverso += cadena.charAt(i); \n } \n System.out.println('El reverso de la cadena ' + cadena + ' es ' + reverso + '''); \n  } \n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // Escriba un programa que lea una cadena de texto desde la consola y muestre su reverso. |\n| import java.util.Scanner; |\n| public class ReversoCadena { |\n| public static void main(String[] args) { |\n|Scanner scanner = new Scanner(System.in); |\n| System.out.print('Ingrese una cadena de texto: '); |\n| String cadena = scanner. |\n| String reverso = ''; |\n| for (int i = cadena.length() - 1; i >= 0; i--) { |\n| reverso += cadena.charAt(i); |\n| } |\n| System.out.println('El reverso de la cadena ' + cadena + ' es ' + reverso + '''); |\n|  } |\n| }",
     "posiblesRespuestas": ["nextLine();"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n \\ Escriba un programa que lea una cadenade texto desde la consola y muestre si es un palíndromo (es decir, si se lee igual de izquierda a derecha que de derecha a izquierda). \n import java.util.Scanner; \n public class Palindromo { \n void main(String[] args) {  \n Scanner scanner = new Scanner(System.in); \n System.out.print('Ingrese una cadena de texto: ');  \n String cadena = scanner.nextLine(); \n String reverso ='';  \n for (int i = cadena.length() - 1; i >= 0; i--) {  \n reverso += cadena.charAt(i); \n  }  \n  if (cadena.equals(reverso)) {  \n System.out.println('La cadena ' + cadena + ' es un palíndromo');  \n } else {  \n System.out.println('La cadena ' + cadena + ' no es un palíndromo');  \n }  \n} \n}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| \\ Escriba un programa que lea una cadenade texto desde la consola y muestre si es un palíndromo (es decir, si se lee igual de izquierda a derecha que de derecha a izquierda). |\n| import java.util.Scanner; |\n| public class Palindromo { |\n| void main(String[] args) {  |\n| Scanner scanner = new Scanner(System.in); |\n| System.out.print('Ingrese una cadena de texto: ');  |\n| String cadena = scanner.nextLine(); |\n| String reverso ='';  |\n| for (int i = cadena.length() - 1; i >= 0; i--) {  |\n| reverso += cadena.charAt(i); |\n|  }  |\n|  if (cadena.equals(reverso)) {  |\n| System.out.println('La cadena ' + cadena + ' es un palíndromo');  |\n| } else {  |\n| System.out.println('La cadena ' + cadena + ' no es un palíndromo');  |\n| }  |\n|} |\n|}",
     "posiblesRespuestas": ["public static"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],

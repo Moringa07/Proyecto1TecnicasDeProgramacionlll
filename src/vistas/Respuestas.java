@@ -7,8 +7,14 @@ package vistas;
 
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Insets;
 import java.util.Arrays;
 import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JSeparator;
 import javax.swing.border.Border;
 import modelos.Participante;
 import modelos.Question;
@@ -23,6 +29,36 @@ public class Respuestas extends javax.swing.JPanel {
     private int pos;
     private Participante participante;
     private PrincipalView cronometro;
+
+    public static String createMultiline(String str, int type) {
+        String stringFinal = str;
+        switch (type) {
+            case 0:
+                // Pregunta de Texto
+                stringFinal = str.replace("|\n|", "<br>");
+                break;
+            case 1:
+                int ultimoEspacio = 0;
+                int ultimo = 0;
+
+                System.out.println(stringFinal);
+                for (int i = 0; i < stringFinal.length(); i++) {
+                    if (i > ultimo + 100) { // No se que pasa pero funciona eso es lo importante
+                        stringFinal = stringFinal.substring(0, ultimoEspacio) + "<br>" + stringFinal.substring(ultimoEspacio + 1);
+                        ultimo = i;
+                    }
+
+                    if (stringFinal.toCharArray()[i] == ' ') {
+                        ultimoEspacio = i;
+                    }
+                }
+                break;
+            default:
+                stringFinal = "Error";
+                break;
+        }
+        return stringFinal;
+    }
 
     public static boolean comprobarRespuesta(Question pregunta) {
         String[] posiblesRespuestas = pregunta.getPosiblesRespuestas();
@@ -76,8 +112,7 @@ public class Respuestas extends javax.swing.JPanel {
         this.preguntas = preguntas;
         this.pos = pos;
         this.participante = participante;
-        
-        
+
         if (pos == 0) {
             atras.setVisible(false);
         }
@@ -88,41 +123,64 @@ public class Respuestas extends javax.swing.JPanel {
             terminarRevision.setVisible(false);
         }
 
-        pregunta1.setText(preguntas[pos].getPregunta());
-        pregunta2.setText(preguntas[pos + 1].getPregunta());
-        pregunta3.setText(preguntas[pos + 2].getPregunta());
-        pregunta4.setText(preguntas[pos + 3].getPregunta());
-        pregunta5.setText(preguntas[pos + 4].getPregunta());
+        for (int i = 0; i < 5; i++) {
+            JPanel container = new JPanel();
 
-        if (Respuestas.comprobarRespuesta(preguntas[pos])) {
-            textArea1.setBorder(bordeTrue);
-        } else {
-            textArea1.setBorder(bordeFalse);
+            container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+
+            JLabel pregunta;
+            
+            if (preguntas[pos + i].getPosiblesRespuestas().length > 1) {
+                pregunta = new JLabel("<html><div style='margin: 10px; font-size: 10px; font-weight: 600'>Pregunta N#" + (i + 1 + pos) + ": " + this.createMultiline(preguntas[pos + i].getPregunta(), 1));
+            } else {
+                pregunta = new JLabel("<html><div style='margin: 10px; font-size: 10px; font-weight: 600'>Pregunta N#" + (i + 1 + pos) + ": <br>" + this.createMultiline(preguntas[pos + i].getPregunta(), 0));
+            }
+            JPanel containerRes = new JPanel();
+            containerRes.setLayout(new BoxLayout(containerRes, BoxLayout.Y_AXIS));
+
+            System.out.println(preguntas[pos + i].getPosiblesRespuestas().length);
+
+            if (preguntas[pos + i].getRespuestasDelUsuario().length > 0 && preguntas[pos + i].getRespuestasDelUsuario()[0] != -1) {
+                if (preguntas[pos + i].getPosiblesRespuestas().length > 1) {
+                    for (int j = 0; j < preguntas[pos + i].getRespuestasDelUsuario().length; j++) {
+                        int index = preguntas[pos + i].getRespuestasDelUsuario()[j];
+
+                        if (index == -1) {
+                            continue;
+                        }
+
+                        JRadioButton checkbox = new JRadioButton();
+                        checkbox.setText("<html><div style='font-weight: 600'><font color='#000000'>" + preguntas[pos + i].getPosiblesRespuestas()[index] + "</font></div></html>");
+                        checkbox.setSelected(true);
+                        checkbox.setEnabled(false);
+                        checkbox.setMargin(new Insets(10, 10, 10, 10));
+                        checkbox.setForeground(new Color(0, 0, 0));
+
+                        containerRes.add(checkbox);
+                    }
+                }
+            } else {
+                JLabel incorrecto = new JLabel("<html><div style='margin: 10px'>No se ingreso ninguna respuesta</div></html>");
+                containerRes.add(incorrecto);
+            }
+
+            if (Respuestas.comprobarRespuesta(preguntas[pos + i])) {
+                containerRes.setBackground(new Color(11, 232, 129));
+            } else {
+                containerRes.setBackground(new Color(255, 118, 117));
+            }
+            container.setBackground(new Color(228, 251, 251));
+
+            container.add(pregunta);
+            container.add(containerRes);
+
+            JSeparator separador = new JSeparator(JSeparator.HORIZONTAL);
+
+            this.container.add(container);
+            this.container.add(separador);
         }
 
-        if (Respuestas.comprobarRespuesta(preguntas[pos + 1])) {
-            textArea2.setBorder(bordeTrue);
-        } else {
-            textArea2.setBorder(bordeFalse);
-        }
-
-        if (Respuestas.comprobarRespuesta(preguntas[pos + 2])) {
-            textArea3.setBorder(bordeTrue);
-        } else {
-            textArea3.setBorder(bordeFalse);
-        }
-
-        if (Respuestas.comprobarRespuesta(preguntas[pos + 3])) {
-            textArea4.setBorder(bordeTrue);
-        } else {
-            textArea4.setBorder(bordeFalse);
-        }
-
-        if (Respuestas.comprobarRespuesta(preguntas[pos + 4])) {
-            textArea5.setBorder(bordeTrue);
-        } else {
-            textArea5.setBorder(bordeFalse);
-        }
+        containerPadre.setBackground(new Color(228, 251, 251));
     }
 
     /**
@@ -136,91 +194,19 @@ public class Respuestas extends javax.swing.JPanel {
 
         jPanel3 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
-        pregunta1 = new javax.swing.JLabel();
-        pregunta2 = new javax.swing.JLabel();
-        pregunta3 = new javax.swing.JLabel();
-        pregunta4 = new javax.swing.JLabel();
-        pregunta5 = new javax.swing.JLabel();
-        respuesta1 = new javax.swing.JScrollPane();
-        textArea1 = new javax.swing.JTextArea();
-        respuesta2 = new javax.swing.JScrollPane();
-        textArea2 = new javax.swing.JTextArea();
-        respuesta3 = new javax.swing.JScrollPane();
-        textArea3 = new javax.swing.JTextArea();
-        respuesta4 = new javax.swing.JScrollPane();
-        textArea4 = new javax.swing.JTextArea();
-        respuesta5 = new javax.swing.JScrollPane();
-        textArea5 = new javax.swing.JTextArea();
         tituloInterfaz = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         terminarRevision = new javax.swing.JButton();
         siguiente = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         atras = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        containerPadre = new javax.swing.JPanel();
+        container = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(228, 251, 251));
 
         jPanel3.setBackground(new java.awt.Color(228, 251, 251));
-
-        pregunta1.setBackground(new java.awt.Color(228, 251, 251));
-        pregunta1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta1.setText("Pregunta #1 -----------------------------------");
-
-        pregunta2.setBackground(new java.awt.Color(228, 251, 251));
-        pregunta2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta2.setText("Pregunta #2 -----------------------------------");
-
-        pregunta3.setBackground(new java.awt.Color(228, 251, 251));
-        pregunta3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta3.setText("Pregunta #3 -----------------------------------");
-
-        pregunta4.setBackground(new java.awt.Color(228, 251, 251));
-        pregunta4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta4.setText("Pregunta #4 -----------------------------------");
-
-        pregunta5.setBackground(new java.awt.Color(228, 251, 251));
-        pregunta5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        pregunta5.setText("Pregunta #5 -----------------------------------");
-
-        textArea1.setEditable(false);
-        textArea1.setColumns(20);
-        textArea1.setLineWrap(true);
-        textArea1.setRows(5);
-        textArea1.setWrapStyleWord(true);
-        textArea1.setBorder(null);
-        respuesta1.setViewportView(textArea1);
-
-        textArea2.setEditable(false);
-        textArea2.setColumns(20);
-        textArea2.setLineWrap(true);
-        textArea2.setRows(5);
-        textArea2.setWrapStyleWord(true);
-        textArea2.setBorder(null);
-        respuesta2.setViewportView(textArea2);
-
-        textArea3.setEditable(false);
-        textArea3.setColumns(20);
-        textArea3.setLineWrap(true);
-        textArea3.setRows(5);
-        textArea3.setWrapStyleWord(true);
-        textArea3.setBorder(null);
-        respuesta3.setViewportView(textArea3);
-
-        textArea4.setEditable(false);
-        textArea4.setColumns(20);
-        textArea4.setLineWrap(true);
-        textArea4.setRows(5);
-        textArea4.setWrapStyleWord(true);
-        textArea4.setBorder(null);
-        respuesta4.setViewportView(textArea4);
-
-        textArea5.setEditable(false);
-        textArea5.setColumns(20);
-        textArea5.setLineWrap(true);
-        textArea5.setRows(5);
-        textArea5.setWrapStyleWord(true);
-        textArea5.setBorder(null);
-        respuesta5.setViewportView(textArea5);
 
         tituloInterfaz.setBackground(new java.awt.Color(228, 251, 251));
         tituloInterfaz.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -265,38 +251,39 @@ public class Respuestas extends javax.swing.JPanel {
         });
         jPanel2.add(atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 100, 40));
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        containerPadre.setBackground(new java.awt.Color(228, 251, 251));
+        containerPadre.setLayout(new javax.swing.BoxLayout(containerPadre, javax.swing.BoxLayout.Y_AXIS));
+
+        container.setBackground(new java.awt.Color(228, 251, 251));
+        container.setLayout(new javax.swing.BoxLayout(container, javax.swing.BoxLayout.Y_AXIS));
+        containerPadre.add(container);
+
+        jScrollPane1.setViewportView(containerPadre);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(respuesta5, javax.swing.GroupLayout.PREFERRED_SIZE, 840, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(pregunta5, javax.swing.GroupLayout.PREFERRED_SIZE, 830, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(respuesta4, javax.swing.GroupLayout.PREFERRED_SIZE, 840, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(pregunta4, javax.swing.GroupLayout.PREFERRED_SIZE, 830, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(respuesta3, javax.swing.GroupLayout.PREFERRED_SIZE, 840, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(pregunta3, javax.swing.GroupLayout.PREFERRED_SIZE, 830, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(respuesta2, javax.swing.GroupLayout.PREFERRED_SIZE, 840, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(pregunta2, javax.swing.GroupLayout.PREFERRED_SIZE, 830, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(respuesta1, javax.swing.GroupLayout.PREFERRED_SIZE, 840, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(tituloInterfaz)
-                                .addGap(216, 216, 216))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(186, 186, 186))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(pregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, 830, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(tituloInterfaz)
+                        .addGap(216, 216, 216))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(186, 186, 186))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(181, 181, 181)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(193, 193, 193))))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 817, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 33, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,27 +292,9 @@ public class Respuestas extends javax.swing.JPanel {
                 .addComponent(tituloInterfaz)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pregunta1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(respuesta1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(pregunta2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(respuesta2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(pregunta3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(respuesta3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(pregunta4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(respuesta4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pregunta5)
-                .addGap(18, 18, 18)
-                .addComponent(respuesta5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -336,7 +305,9 @@ public class Respuestas extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -360,7 +331,7 @@ public class Respuestas extends javax.swing.JPanel {
 
     private void terminarRevisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarRevisionActionPerformed
         datosFinalesPrueba finalizar = new datosFinalesPrueba(this.preguntas, this.participante, this.cronometro);
-        
+
         finalizar.setSize(880, 470);
         finalizar.setVisible(true);
 
@@ -389,27 +360,15 @@ public class Respuestas extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atras;
+    private javax.swing.JPanel container;
+    private javax.swing.JPanel containerPadre;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel pregunta1;
-    private javax.swing.JLabel pregunta2;
-    private javax.swing.JLabel pregunta3;
-    private javax.swing.JLabel pregunta4;
-    private javax.swing.JLabel pregunta5;
-    private javax.swing.JScrollPane respuesta1;
-    private javax.swing.JScrollPane respuesta2;
-    private javax.swing.JScrollPane respuesta3;
-    private javax.swing.JScrollPane respuesta4;
-    private javax.swing.JScrollPane respuesta5;
     private javax.swing.JButton siguiente;
     private javax.swing.JButton terminarRevision;
-    private javax.swing.JTextArea textArea1;
-    private javax.swing.JTextArea textArea2;
-    private javax.swing.JTextArea textArea3;
-    private javax.swing.JTextArea textArea4;
-    private javax.swing.JTextArea textArea5;
     private javax.swing.JLabel tituloInterfaz;
     // End of variables declaration//GEN-END:variables
 }

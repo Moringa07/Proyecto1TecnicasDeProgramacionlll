@@ -34,7 +34,7 @@ public class Pregunta3RespuestasModelo extends javax.swing.JPanel {
         this.participante = participante;
         this.cronometro = cronometro;
 
-        pregunta.setText("<html>" + preguntaActual.getPregunta() + "</html>");
+        pregunta.setText("<html>Pregunta N#" + (posicion + 1) + " " + preguntaActual.getPregunta() + "</html>");
         
         if (preguntaActual.getRespuestasDelUsuario().length > 0) {
             javax.swing.JRadioButton[] select = {seleccion1, seleccion2, seleccion3, seleccion4, seleccion5};
@@ -549,7 +549,7 @@ public class Pregunta3RespuestasModelo extends javax.swing.JPanel {
             padre.repaint();
         } else {
             ShowAlert alerta = new ShowAlert("Error, tipo de pregunta no valida", "Tipo de pregunta no valida", JOptionPane.ERROR_MESSAGE);
-            System.out.println(nuevaPregunta);
+            System.out.println(nuevaPregunta.getPregunta());
         }
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
@@ -723,7 +723,7 @@ public class Pregunta3RespuestasModelo extends javax.swing.JPanel {
         if(seleccion5.isSelected()){
             count++;
         }
-        
+
         if(count > 3){
             seleccion5.setSelected(false);
             ShowAlert alerta = new ShowAlert("Error", "Solo se puede elegir como maximo 3 opciones", JOptionPane.ERROR_MESSAGE);
@@ -734,8 +734,9 @@ public class Pregunta3RespuestasModelo extends javax.swing.JPanel {
         ShowAlert alerta = new ShowAlert("Terminar Prueba", "¿Estas seguro de querer terminar la prueba?",
                 JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
         int respuesta = alerta.getRespuesta();
-        
+
         if(respuesta == 0){
+            this.cronometro.terminarCronometro();
             Respuestas resultados = new Respuestas(this.preguntas, 0, this.participante, this.cronometro);
             resultados.setSize(880, 470);
             resultados.setVisible(true);

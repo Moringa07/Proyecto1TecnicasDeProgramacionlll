@@ -288,17 +288,30 @@ public class SeleccionarLenguaje extends javax.swing.JPanel {
     private void AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarActionPerformed
         Preguntas preguntas = null;
         if (opcioncmas.isSelected()) { // C++
-            ShowAlert alerta = new ShowAlert("Lenguaje seleccionado", "C++", JOptionPane.WARNING_MESSAGE);
+            String path = new File(".").getAbsolutePath();
+            path = path.substring(0, path.length() - 2);
+            preguntas = new Preguntas(path + "\\src\\Preguntas\\preguntasC++.json");
+            this.cronometro.setTipoDePrueba("C++");
         } else if (opcionC.isSelected()) { // C
             String path = new File(".").getAbsolutePath();
             path = path.substring(0, path.length() - 2);
             preguntas = new Preguntas(path + "\\src\\Preguntas\\preguntasC.json");
+            this.cronometro.setTipoDePrueba("C");
         } else if (opcionJava.isSelected()) { // Java
-            ShowAlert alerta = new ShowAlert("Lenguaje seleccionado", "Java", JOptionPane.WARNING_MESSAGE);
+            String path = new File(".").getAbsolutePath();
+            path = path.substring(0, path.length() - 2);
+            preguntas = new Preguntas(path + "\\src\\Preguntas\\preguntasJava.json");
+            this.cronometro.setTipoDePrueba("Java");
         } else if (opcioncishar.isSelected()) { // C#
-            ShowAlert alerta = new ShowAlert("Lenguaje seleccionado", "C#", JOptionPane.WARNING_MESSAGE);
+            String path = new File(".").getAbsolutePath();
+            path = path.substring(0, path.length() - 2);
+            preguntas = new Preguntas(path + "\\src\\Preguntas\\preguntasC#.json");
+            this.cronometro.setTipoDePrueba("C#");
         } else if (opcionPython.isSelected()) { // Python
-            ShowAlert alerta = new ShowAlert("Lenguaje seleccionado", "Python", JOptionPane.WARNING_MESSAGE);
+            String path = new File(".").getAbsolutePath();
+            path = path.substring(0, path.length() - 2);
+            preguntas = new Preguntas(path + "\\src\\Preguntas\\preguntasPython.json");
+            this.cronometro.setTipoDePrueba("Python");
         } else { // Error
             ShowAlert alerta = new ShowAlert("Error", "No se ha seleccionado ningun lenguaje para la prueba :c", JOptionPane.ERROR_MESSAGE);
             return;

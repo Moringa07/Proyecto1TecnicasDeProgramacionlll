@@ -239,61 +239,61 @@
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código /n // programa en C++ que lea dos números enteros y calcule su suma. /n #include <iostream> \n using namespace std; \n int main() { \n  int num1, num2; \n  cout << 'Ingrese dos números enteros: '; \n   cin; \n   int suma = num1 + num2; \n   cout << 'La suma de ' << num1 << ' y ' << num2 << ' es ' << suma; \n   return 0;}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código /n // programa en C++ que lea dos números enteros y calcule su suma. /n #include <iostream> |\n| using namespace std; |\n| int main() { |\n|  int num1, num2; |\n|  cout << 'Ingrese dos números enteros: '; |\n|   cin; |\n|   int suma = num1 + num2; |\n|   cout << 'La suma de ' << num1 << ' y ' << num2 << ' es ' << suma; |\n|   return 0;}",
     "posiblesRespuestas": [">> num1 >> num2"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique su respuesta, ¿cuánto vale prom?: \n int main() { \n  float venta[ ] = {10, 5, 12, 1, 20}; \n float prom; \n prom = venta[1] + venta[2] + venta[4] / 3;}",
+    "pregunta": "Del siguiente programa identifique su respuesta, ¿cuánto vale prom?: |\n| int main() { |\n|  float venta[ ] = {10, 5, 12, 1, 20}; |\n| float prom; |\n| prom = venta[1] + venta[2] + venta[4] / 3;}",
     "posiblesRespuestas": ["12.3"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n //un programa en C++ que lea un número entero y determine si es par o impar.\n #include <iostream> \n using namespace std; \n int main() {   cout << 'Ingrese un número entero: '; \n   cin >> num; \n   if (num % 2 == 0) { \n     cout << num << 'es par.'; \n  } else {    cout << num << ' es impar.';  } \n  return 0;}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: |\n| //un programa en C++ que lea un número entero y determine si es par o impar.|\n| #include <iostream> |\n| using namespace std; |\n| int main() {   cout << 'Ingrese un número entero: '; |\n|   cin >> num; |\n|   if (num % 2 == 0) { |\n|     cout << num << 'es par.'; |\n|  } else {    cout << num << ' es impar.';  } |\n|  return 0;}",
     "posiblesRespuestas": ["int num;"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n // programa en C++ que calcule el área de un círculo. \n #include <iostream> \n using namespace std; \n int main() { double radio; \n   const double PI = 3.14159; \n   cout << 'Ingrese el radio del círculo: '; \n   cin >> radio; \n  double area = PI * radio * radio; \n   cout << 'El área del círculo es ' << ; \n   return 0;}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: |\n| // programa en C++ que calcule el área de un círculo. |\n| #include <iostream> |\n| using namespace std; |\n| int main() { double radio; |\n|   const double PI = 3.14159; |\n|   cout << 'Ingrese el radio del círculo: '; |\n|   cin >> radio; |\n|  double area = PI * radio * radio; |\n|   cout << 'El área del círculo es ' << ; |\n|   return 0;}",
     "posiblesRespuestas": ["area"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: \n // programa en C++ que lea un número entero y determine si es positivo, negativo o cero. \n #include <iostream> \n using namespace std; \n int main() { \n   int num; \n   cout << 'Ingrese un número entero: '; \n   cin >> num; \n   if (num > 0) {     cout << num << ' es positivo.'; \n   } else if () { \n     cout << num << 'es negativo.'; \n   } else {     cout << 'El número es cero.'; \n   } \n  return 0;}",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código: |\n| // programa en C++ que lea un número entero y determine si es positivo, negativo o cero. |\n| #include <iostream> |\n| using namespace std; |\n| int main() { |\n|   int num; |\n|   cout << 'Ingrese un número entero: '; |\n|   cin >> num; |\n|   if (num > 0) {     cout << num << ' es positivo.'; |\n|   } else if () { |\n|     cout << num << 'es negativo.'; |\n|   } else {     cout << 'El número es cero.'; |\n|   } |\n|  return 0;}",
     "posiblesRespuestas": ["num<0"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // programa en C++ que lea un número entero y determine si es un número perfecto o no. \n #include <iostream> \n using namespace std; \n int main() { \n   int num; \n   int suma_divisores = 0; \n   cout << 'Ingrese un número entero: '; \n   cin >> num; \n   for (int i = 1; i <= num / 2; i++) { \n     if (num % i == 0) { \n       suma_divisores += i;     } \n  }   if (suma_divisores == num) { \n     cout << num << ' es un número perfecto.'; \n   } else {     cout << num << 'no es un número perfecto.';    } \n }",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // programa en C++ que lea un número entero y determine si es un número perfecto o no. |\n| #include <iostream> |\n| using namespace std; |\n| int main() { |\n|   int num; |\n|   int suma_divisores = 0; |\n|   cout << 'Ingrese un número entero: '; |\n|   cin >> num; |\n|   for (int i = 1; i <= num / 2; i++) { |\n|     if (num % i == 0) { |\n|       suma_divisores += i;     } |\n|  }   if (suma_divisores == num) { |\n|     cout << num << ' es un número perfecto.'; |\n|   } else {     cout << num << 'no es un número perfecto.';    } |\n| }",
     "posiblesRespuestas": ["return 0"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta":"Del siguiente programa identifique que falta para que funcione el código \n// programa en C++ que saque el promedio de 3 notas finales \n #include<iostream> \n using namespace std; \n int main(){ \n float n1, n2, n3, notaP, notaT,notaPAr; \n cout<<’\nBienvenido, te ayudare a sacar el promedio de 3 notas...’<<endl;cout<<'\nIngrese el primer numero: '; cin>>n1; \n cout<<'\nIngrese el segundo numero: '; \n cin>>n2;   \n cout<<'\nIngrese el tercer numero: '; cin>>n3; n notaP= n1*0.30; \n    notaT= n2*0.60; \n notaPAr= n3*0.10; \n result = notaP + notaT + notaPAr; \n cout<< ‘\nLa nota final del alumno es: ‘<< result<< endl; \n return 0;}",
+    "pregunta":"Del siguiente programa identifique que falta para que funcione el código |\n|// programa en C++ que saque el promedio de 3 notas finales |\n| #include<iostream> |\n| using namespace std; |\n| int main(){ |\n| float n1, n2, n3, notaP, notaT,notaPAr; |\n| cout<<’\nBienvenido, te ayudare a sacar el promedio de 3 notas...’<<endl;cout<<'\nIngrese el primer numero: '; cin>>n1; |\n| cout<<'\nIngrese el segundo numero: '; |\n| cin>>n2;   |\n| cout<<'\nIngrese el tercer numero: '; cin>>n3; n notaP= n1*0.30; |\n|    notaT= n2*0.60; |\n| notaPAr= n3*0.10; |\n| result = notaP + notaT + notaPAr; |\n| cout<< ‘\nLa nota final del alumno es: ‘<< result<< endl; |\n| return 0;}",
     "posiblesRespuestas": ["result"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // programa en C++ que saque el mayor de 2 numeros \n #include <iostream> \n using namespace std; \n int main (){ \n int a, b; \n cout<<’ Ingrese un numero: ‘; \n cin>> a;  \n cout<<'Ingrese un numero: '; \n if (a>=b){  \n cout<<'El numero mayor es: '<<a; \n }else { \n cout'El numero mayor es: '<<b; \n } \n return 0; } ",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // programa en C++ que saque el mayor de 2 numeros |\n| #include <iostream> |\n| using namespace std; |\n| int main (){ |\n| int a, b; |\n| cout<<’ Ingrese un numero: ‘; |\n| cin>> a;  |\n| cout<<'Ingrese un numero: '; |\n| if (a>=b){  |\n| cout<<'El numero mayor es: '<<a; |\n| }else { |\n| cout'El numero mayor es: '<<b; |\n| } |\n| return 0; } ",
     "posiblesRespuestas": ["cin>>b"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n // programa en C++ que saque el precio del producto al aplicar el IVA  \n #include <iostream> \n using namespace std; \n int main ()() { \n float precio, iva, precioIva; \n cout<<'Ingrese el precio del producto: '; \n cin>>precio; \n iva=precio*0.21; \n    =precio + iva; \n cout<<'El prevcio del producto al aplicarle el IVA es: '<<precioIva<<endl; \n return 0;}" ,
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| // programa en C++ que saque el precio del producto al aplicar el IVA  |\n| #include <iostream> |\n| using namespace std; |\n| int main ()() { |\n| float precio, iva, precioIva; |\n| cout<<'Ingrese el precio del producto: '; |\n| cin>>precio; |\n| iva=precio*0.21; |\n|    =precio + iva; |\n| cout<<'El prevcio del producto al aplicarle el IVA es: '<<precioIva<<endl; |\n| return 0;}" ,
     "posiblesRespuestas": ["precioIva"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],
      "respuestaTextoUsuario": ""
 },{
-    "pregunta": "Del siguiente programa identifique que falta para que funcione el código \n //programa para saber si la letra ingresada es una vocal \n   \n #include <iostream> \n using namespace std; \n  int main (){ \n char letra; \n cout<<'\nIngrese una letra: '; \n cin>>; \n if((letra=='a') || (letra=='e')|| (letra=='i') || (letra=='o') || (letra=='u') || (letra=='A')|| (letra=='E') || (letra=='I') || (letra=='O') || (letra=='U')) { \n cout<<'La letra ingresada es una vocal'}else if(letra != 1) {\n cout<<'No se puede procesar el dato. Intente de nuevo ' } ; \n return 0; } ",
+    "pregunta": "Del siguiente programa identifique que falta para que funcione el código |\n| //programa para saber si la letra ingresada es una vocal |\n|   |\n| #include <iostream> |\n| using namespace std; |\n|  int main (){ |\n| char letra; |\n| cout<<'\nIngrese una letra: '; |\n| cin>>; |\n| if((letra=='a') || (letra=='e')|| (letra=='i') || (letra=='o') || (letra=='u') || (letra=='A')|| (letra=='E') || (letra=='I') || (letra=='O') || (letra=='U')) { |\n| cout<<'La letra ingresada es una vocal'}else if(letra != 1) {|\n| cout<<'No se puede procesar el dato. Intente de nuevo ' } ; |\n| return 0; } ",
     "posiblesRespuestas": ["letra"],
     "respuestasCorrectas": [],
      "respuestasDelUsuario": [],

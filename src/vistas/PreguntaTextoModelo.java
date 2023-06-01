@@ -27,7 +27,7 @@ public class PreguntaTextoModelo extends javax.swing.JPanel {
         this.participante = participante;
         this.cronometro = cronometro;
 
-        pregunta.setText("<html><p style='font-size: 10px;'>" + preguntaActual.getPregunta() + "</p></html>");
+        pregunta.setText("<html><p style='font-size: 10px;'>Posición N#" + (posicion + 1) + " " + Respuestas.createMultiline(preguntaActual.getPregunta(), 0) + "</p></html>");
         
         respuesta.setText(preguntaActual.getRespuestaTextoUsuarioo());
 
@@ -55,11 +55,9 @@ public class PreguntaTextoModelo extends javax.swing.JPanel {
         btnAtras = new javax.swing.JButton();
         btnCancelarPrueba = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
         contenedor = new javax.swing.JPanel();
-        contenedorPreguntas = new javax.swing.JPanel();
         pregunta = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        panelOpciones = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         respuesta = new javax.swing.JTextArea();
 
@@ -120,58 +118,25 @@ public class PreguntaTextoModelo extends javax.swing.JPanel {
         jLabel1.setText("* Responder con Texto");
         jLabel1.setToolTipText("");
 
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
         contenedor.setBackground(new java.awt.Color(204, 255, 255));
         contenedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         contenedor.setPreferredSize(new java.awt.Dimension(830, 830));
-        contenedor.setLayout(new javax.swing.BoxLayout(contenedor, javax.swing.BoxLayout.Y_AXIS));
+        contenedor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        contenedorPreguntas.setBackground(new java.awt.Color(204, 255, 255));
-        contenedorPreguntas.setPreferredSize(new java.awt.Dimension(828, 346));
-
-        pregunta.setBackground(new java.awt.Color(204, 255, 255));
-        pregunta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        pregunta.setPreferredSize(new java.awt.Dimension(100, 100));
-
-        jScrollPane6.setBorder(null);
-        jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane6.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        panelOpciones.setBackground(new java.awt.Color(204, 255, 255));
-        panelOpciones.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        panelOpciones.setLayout(new javax.swing.BoxLayout(panelOpciones, javax.swing.BoxLayout.Y_AXIS));
+        pregunta.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        pregunta.setText("jLabel2");
+        contenedor.add(pregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 13, 800, 280));
 
         respuesta.setColumns(20);
-        respuesta.setRows(5);
+        respuesta.setRows(3);
         jScrollPane1.setViewportView(respuesta);
 
-        panelOpciones.add(jScrollPane1);
+        contenedor.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 300, 780, 50));
 
-        jScrollPane6.setViewportView(panelOpciones);
-
-        javax.swing.GroupLayout contenedorPreguntasLayout = new javax.swing.GroupLayout(contenedorPreguntas);
-        contenedorPreguntas.setLayout(contenedorPreguntasLayout);
-        contenedorPreguntasLayout.setHorizontalGroup(
-            contenedorPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contenedorPreguntasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pregunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(contenedorPreguntasLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
-        );
-        contenedorPreguntasLayout.setVerticalGroup(
-            contenedorPreguntasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contenedorPreguntasLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addComponent(pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        contenedor.add(contenedorPreguntas);
+        jScrollPane3.setViewportView(contenedor);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -187,14 +152,14 @@ public class PreguntaTextoModelo extends javax.swing.JPanel {
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelDeBotonesDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -367,7 +332,7 @@ public class PreguntaTextoModelo extends javax.swing.JPanel {
             padre.repaint();
         } else {
             ShowAlert alerta = new ShowAlert("Error, tipo de pregunta no valida", "Tipo de pregunta no valida", JOptionPane.ERROR_MESSAGE);
-            System.out.println(nuevaPregunta);
+            System.out.println(nuevaPregunta.toString());
         }
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
@@ -377,6 +342,7 @@ public class PreguntaTextoModelo extends javax.swing.JPanel {
         int respuesta = alerta.getRespuesta();
         
         if(respuesta == 0){
+            this.cronometro.terminarCronometro();
             Respuestas resultados = new Respuestas(this.preguntas, 0, this.participante, this.cronometro);
             resultados.setSize(880, 470);
             resultados.setVisible(true);
@@ -397,13 +363,11 @@ public class PreguntaTextoModelo extends javax.swing.JPanel {
     private javax.swing.JButton btnFinalizarPrueba;
     private javax.swing.JButton btnSiguiente;
     private javax.swing.JPanel contenedor;
-    private javax.swing.JPanel contenedorPreguntas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPanel panelDeBotonesDerecho;
     private javax.swing.JPanel panelDeBotonesIzquierdos;
-    private javax.swing.JPanel panelOpciones;
     private javax.swing.JLabel pregunta;
     private javax.swing.JTextArea respuesta;
     // End of variables declaration//GEN-END:variables

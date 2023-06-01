@@ -176,7 +176,7 @@ public class InstruccionesPrueba extends javax.swing.JPanel {
             this.cronometro.comenzarCronometro();
         } else {
             ShowAlert alerta = new ShowAlert("Error, tipo de pregunta no valida", "Tipo de pregunta no valida", JOptionPane.ERROR_MESSAGE);
-            System.out.println(nuevaPregunta);
+            System.out.println(nuevaPregunta.getPregunta());
         }
     }//GEN-LAST:event_aceptarActionPerformed
 
